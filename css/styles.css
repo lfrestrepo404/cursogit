@@ -35,3 +35,7 @@ p{
     font-size: 20px;
     color: var(--secondary-color);
 }
+
+img{
+    max-width: 100%;
+}
