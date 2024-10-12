@@ -1,0 +1,37 @@
+:root{
+    --primary-color: #2396bd;
+    --secondary-color: #999;
+}
+
+body{
+    padding: 40px;
+}
+
+header{
+    width: 100%;
+    position: relative;
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul a{
+    text-decoration: none;
+    margin: 0 10px;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+h1{
+    color: var(--primary-color);
+    font-size: 38px;
+}
+
+p{
+    font-size: 20px;
+    color: var(--secondary-color);
+}
