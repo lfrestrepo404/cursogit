@@ -417,7 +417,8 @@ git checkout id_del_commit
             <h3>1. Identificar el Commit</h3>
             <p><strong>Descripción:</strong> Para restaurar un archivo a un estado anterior, primero necesitamos
                 identificar el commit al que deseamos volver. Esto se puede hacer utilizando el comando
-                <code>git log</code>.</p>
+                <code>git log</code>.
+            </p>
             <pre><code><span class="comment"># Ver el historial de commits y obtener el ID del commit deseado</span>
 git log
 </code></pre>
@@ -449,7 +450,8 @@ git log
 
             <h3>2. Volver a un Commit Específico</h3>
             <p><strong>Descripción:</strong> Para restaurar todo el proyecto a un commit específico, puedes usar
-                <code>git checkout</code> o <code>git reset</code>.</p>
+                <code>git checkout</code> o <code>git reset</code>.
+            </p>
             <pre><code><span class="comment"># Volver a un commit específico (deshacer cambios)</span>
 git checkout id_del_commit
 <span class="comment"># Esto cambia el estado de todo el proyecto al de ese commit.</span>
@@ -477,126 +479,471 @@ git reset --hard id_del_commit
         <section id="cont6">
             <h1>Capítulo 6: Flujo de Trabajo con Repositorios Remotos</h1>
 
-<h2>Introducción</h2>
-<p>En este capítulo, exploraremos el flujo de trabajo en Git cuando trabajamos con repositorios remotos. Este proceso es crucial para la colaboración en proyectos, ya que permite a varios desarrolladores trabajar en el mismo código de manera eficiente y organizada. Veremos los comandos clave que se utilizan para clonar repositorios, realizar cambios y sincronizar esos cambios con el repositorio remoto.</p>
+            <h2>Introducción</h2>
+            <p>En este capítulo, exploraremos el flujo de trabajo en Git cuando trabajamos con repositorios remotos.
+                Este proceso es crucial para la colaboración en proyectos, ya que permite a varios desarrolladores
+                trabajar en el mismo código de manera eficiente y organizada. Veremos los comandos clave que se utilizan
+                para clonar repositorios, realizar cambios y sincronizar esos cambios con el repositorio remoto.</p>
 
 
-<h2>¿Qué es un Repositorio Remoto?</h2>
-<p>Un repositorio remoto es una versión de tu proyecto que se encuentra alojada en un servidor en línea. A diferencia de un repositorio local, que se almacena en tu máquina, el repositorio remoto permite a varios colaboradores acceder y trabajar en el mismo proyecto desde diferentes ubicaciones. Esto facilita la colaboración y la sincronización de cambios entre los desarrolladores.</p>
+            <h2>¿Qué es un Repositorio Remoto?</h2>
+            <p>Un repositorio remoto es una versión de tu proyecto que se encuentra alojada en un servidor en línea. A
+                diferencia de un repositorio local, que se almacena en tu máquina, el repositorio remoto permite a
+                varios colaboradores acceder y trabajar en el mismo proyecto desde diferentes ubicaciones. Esto facilita
+                la colaboración y la sincronización de cambios entre los desarrolladores.</p>
 
-<h2>¿Qué es GitHub?</h2>
-<p><strong>Definición:</strong> GitHub es una plataforma de desarrollo colaborativo que utiliza Git como sistema de control de versiones. Permite a los usuarios alojar y gestionar sus repositorios remotos, colaborar con otros, realizar revisiones de código y mucho más.</p>
-<p><strong>Ejemplo:</strong> Un repositorio en GitHub puede ser un proyecto de software donde varios desarrolladores trabajan juntos, compartiendo cambios, revisando el código de los demás y gestionando versiones del proyecto.</p>
+            <h2>¿Qué es GitHub?</h2>
+            <p><strong>Definición:</strong> GitHub es una plataforma de desarrollo colaborativo que utiliza Git como
+                sistema de control de versiones. Permite a los usuarios alojar y gestionar sus repositorios remotos,
+                colaborar con otros, realizar revisiones de código y mucho más.</p>
+            <p><strong>Ejemplo:</strong> Un repositorio en GitHub puede ser un proyecto de software donde varios
+                desarrolladores trabajan juntos, compartiendo cambios, revisando el código de los demás y gestionando
+                versiones del proyecto.</p>
 
-<h2>Flujo de Trabajo con Repositorios Remotos</h2>
+            <h2>Flujo de Trabajo con Repositorios Remotos</h2>
 
-<h3>1. Clonar un Repositorio Remoto</h3>
-<p><strong>Descripción:</strong> El primer paso al trabajar con un repositorio remoto es clonarlo a tu máquina local. Esto se realiza utilizando el comando <code>git clone</code>.</p>
-<pre><code><span class="comment"># Clonar un repositorio remoto</span>
+            <h3>1. Clonar un Repositorio Remoto</h3>
+            <p><strong>Descripción:</strong> El primer paso al trabajar con un repositorio remoto es clonarlo a tu
+                máquina local. Esto se realiza utilizando el comando <code>git clone</code>.</p>
+            <pre><code><span class="comment"># Clonar un repositorio remoto</span>
 git clone https://github.com/usuario/repositorio.git
 <span class="comment"># Esto crea una copia local del repositorio remoto.</span>
 </code></pre>
 
-<h3>2. Verificar el Estado del Repositorio</h3>
-<p><strong>Descripción:</strong> Antes de realizar cambios, es una buena práctica verificar el estado del repositorio. Esto se puede hacer con el comando <code>git status</code>.</p>
-<pre><code><span class="comment"># Verificar el estado del repositorio</span>
+            <h3>2. Verificar el Estado del Repositorio</h3>
+            <p><strong>Descripción:</strong> Antes de realizar cambios, es una buena práctica verificar el estado del
+                repositorio. Esto se puede hacer con el comando <code>git status</code>.</p>
+            <pre><code><span class="comment"># Verificar el estado del repositorio</span>
 git status
 <span class="comment"># Esto muestra los archivos modificados, los archivos en el área de preparación y los untracked.</span>
 </code></pre>
 
-<h3>3. Hacer Cambios y Prepararlos</h3>
-<p><strong>Descripción:</strong> Una vez que el repositorio está clonado y has verificado el estado, puedes realizar cambios en los archivos. Después de hacer los cambios, necesitas agregarlos al área de preparación.</p>
-<pre><code><span class="comment"># Agregar todos los cambios al área de preparación</span>
+            <h3>3. Hacer Cambios y Prepararlos</h3>
+            <p><strong>Descripción:</strong> Una vez que el repositorio está clonado y has verificado el estado, puedes
+                realizar cambios en los archivos. Después de hacer los cambios, necesitas agregarlos al área de
+                preparación.</p>
+            <pre><code><span class="comment"># Agregar todos los cambios al área de preparación</span>
 git add .
 <span class="comment"># El punto (.) indica que se deben agregar todos los archivos modificados.</span>
 </code></pre>
 
-<h3>4. Confirmar los Cambios</h3>
-<p><strong>Descripción:</strong> Después de agregar los cambios, es necesario confirmarlos para que queden registrados en el historial del repositorio local.</p>
-<pre><code><span class="comment"># Confirmar los cambios realizados</span>
+            <h3>4. Confirmar los Cambios</h3>
+            <p><strong>Descripción:</strong> Después de agregar los cambios, es necesario confirmarlos para que queden
+                registrados en el historial del repositorio local.</p>
+            <pre><code><span class="comment"># Confirmar los cambios realizados</span>
 git commit -m "Descripción de los cambios realizados"
 </code></pre>
 
-<h3>5. Enviar Cambios al Repositorio Remoto</h3>
-<p><strong>Descripción:</strong> Una vez que los cambios están confirmados, puedes enviarlos al repositorio remoto usando el comando <code>git push</code>.</p>
-<pre><code><span class="comment"># Enviar cambios al repositorio remoto</span>
+            <h3>5. Enviar Cambios al Repositorio Remoto</h3>
+            <p><strong>Descripción:</strong> Una vez que los cambios están confirmados, puedes enviarlos al repositorio
+                remoto usando el comando <code>git push</code>.</p>
+            <pre><code><span class="comment"># Enviar cambios al repositorio remoto</span>
 git push origin main
 <span class="comment"># "origin" es el nombre predeterminado para el repositorio remoto y "main" es la rama a la que se envían los cambios.</span>
 </code></pre>
 
-<h3>6. Obtener Cambios del Repositorio Remoto</h3>
-<p><strong>Descripción:</strong> Si otros colaboradores han realizado cambios en el repositorio remoto, puedes obtener esos cambios utilizando <code>git pull</code>.</p>
-<pre><code><span class="comment"># Obtener cambios del repositorio remoto y fusionarlos con la rama actual</span>
+            <h3>6. Obtener Cambios del Repositorio Remoto</h3>
+            <p><strong>Descripción:</strong> Si otros colaboradores han realizado cambios en el repositorio remoto,
+                puedes obtener esos cambios utilizando <code>git pull</code>.</p>
+            <pre><code><span class="comment"># Obtener cambios del repositorio remoto y fusionarlos con la rama actual</span>
 git pull origin main
 </code></pre>
 
-<h3>7. Repetir el Ciclo</h3>
-<p><strong>Descripción:</strong> Este flujo de trabajo es cíclico. Después de realizar un <code>git pull</code> para obtener los últimos cambios, puedes continuar haciendo modificaciones, confirmándolas y enviándolas al repositorio remoto. Repite este ciclo de cambios, confirmaciones y envíos según sea necesario.</p>
+            <h3>7. Repetir el Ciclo</h3>
+            <p><strong>Descripción:</strong> Este flujo de trabajo es cíclico. Después de realizar un
+                <code>git pull</code> para obtener los últimos cambios, puedes continuar haciendo modificaciones,
+                confirmándolas y enviándolas al repositorio remoto. Repite este ciclo de cambios, confirmaciones y
+                envíos según sea necesario.
+            </p>
 
-<h2>Conclusión</h2>
-<p>El flujo de trabajo con repositorios remotos en Git es fundamental para la colaboración efectiva en proyectos de desarrollo. A través de comandos como <code>git clone</code>, <code>git status</code>, <code>git add .</code>, <code>git commit</code>, <code>git push</code>, y <code>git pull</code>, los desarrolladores pueden sincronizar sus cambios y trabajar juntos de manera eficiente. Entender este flujo de trabajo es clave para el éxito en proyectos de equipo.</p>
+            <h2>Conclusión</h2>
+            <p>El flujo de trabajo con repositorios remotos en Git es fundamental para la colaboración efectiva en
+                proyectos de desarrollo. A través de comandos como <code>git clone</code>, <code>git status</code>,
+                <code>git add .</code>, <code>git commit</code>, <code>git push</code>, y <code>git pull</code>, los
+                desarrolladores pueden sincronizar sus cambios y trabajar juntos de manera eficiente. Entender este
+                flujo de trabajo es clave para el éxito en proyectos de equipo.
+            </p>
 
 
 
-<p>Este capitulo solo busca darte un mayor contexto, en los siguientes capitulos veremos como conectarnos a nuestros repositorios remotos desde cero, por ahora espero hayas entendido el flujo</p>
+            <p>Este capitulo solo busca darte un mayor contexto, en los siguientes capitulos veremos como conectarnos a
+                nuestros repositorios remotos desde cero, por ahora espero hayas entendido el flujo</p>
         </section>
         <section id="cont7">
             <h1>Capítulo 7: Configuración de GitHub con Llaves SSH</h1>
 
             <h2>Introducción</h2>
-            <p>En este capítulo, aprenderemos a configurar nuestra cuenta de GitHub en nuestro equipo utilizando llaves SSH. Este proceso es fundamental para enlazar de manera segura nuestros dispositivos con GitHub, lo que nos permite trabajar de forma más eficiente y colaborativa. Al usar llaves SSH, podemos autenticarnos sin necesidad de ingresar nuestras credenciales cada vez que interactuamos con un repositorio remoto, lo que simplifica nuestras operaciones diarias. Este método no solo mejora la seguridad al evitar el uso de contraseñas en texto plano, sino que también optimiza nuestro flujo de trabajo, permitiéndonos enfocarnos en el desarrollo y la colaboración con otros desarrolladores de manera más efectiva.</p>
-            
+            <p>En este capítulo, aprenderemos a configurar nuestra cuenta de GitHub en nuestro equipo utilizando llaves
+                SSH. Este proceso es fundamental para enlazar de manera segura nuestros dispositivos con GitHub, lo que
+                nos permite trabajar de forma más eficiente y colaborativa. Al usar llaves SSH, podemos autenticarnos
+                sin necesidad de ingresar nuestras credenciales cada vez que interactuamos con un repositorio remoto, lo
+                que simplifica nuestras operaciones diarias. Este método no solo mejora la seguridad al evitar el uso de
+                contraseñas en texto plano, sino que también optimiza nuestro flujo de trabajo, permitiéndonos
+                enfocarnos en el desarrollo y la colaboración con otros desarrolladores de manera más efectiva.</p>
 
-<h2>¿Qué es una Llave SSH?</h2>
-<p>Una llave SSH es un par de claves criptográficas que se utilizan para autenticar una conexión segura entre tu máquina local y un servidor remoto, como GitHub. Consiste en una llave pública y una llave privada. La llave pública se almacena en el servidor (GitHub), mientras que la llave privada se queda en tu máquina local y nunca se comparte.</p>
 
-<h2>Paso a Paso para Configurar Llaves SSH</h2>
+            <h2>¿Qué es una Llave SSH?</h2>
+            <p>Una llave SSH es un par de claves criptográficas que se utilizan para autenticar una conexión segura
+                entre tu máquina local y un servidor remoto, como GitHub. Consiste en una llave pública y una llave
+                privada. La llave pública se almacena en el servidor (GitHub), mientras que la llave privada se queda en
+                tu máquina local y nunca se comparte.</p>
 
-<h3>1. Generar un Par de Llaves SSH</h3>
-<p><strong>Descripción:</strong> El primer paso es generar un par de llaves SSH en tu máquina local. Esto se hace mediante el comando <code>ssh-keygen</code>.</p>
-<pre><code><span class="comment"># Generar un nuevo par de llaves SSH</span>
+            <h2>Paso a Paso para Configurar Llaves SSH</h2>
+
+            <h3>1. Generar un Par de Llaves SSH</h3>
+            <p><strong>Descripción:</strong> El primer paso es generar un par de llaves SSH en tu máquina local. Esto se
+                hace mediante el comando <code>ssh-keygen</code>.</p>
+            <pre><code><span class="comment"># Generar un nuevo par de llaves SSH</span>
 ssh-keygen -t rsa -b 4096 -C "tu_email@example.com"
 <span class="comment"># El parámetro -C se utiliza para agregar un comentario que normalmente es tu email.</span>
 <span class="comment"># Presiona Enter para aceptar la ubicación predeterminada del archivo.</span>
 </code></pre>
 
-<h3>2. Agregar la Llave SSH al Agente SSH</h3>
-<p><strong>Descripción:</strong> Una vez generada la llave, necesitas agregarla al agente SSH para que la gestione. Esto permite que tu máquina local use la llave automáticamente cuando interactúas con GitHub.</p>
-<pre><code><span class="comment"># Iniciar el agente SSH</span>
+            <h3>2. Agregar la Llave SSH al Agente SSH</h3>
+            <p><strong>Descripción:</strong> Una vez generada la llave, necesitas agregarla al agente SSH para que la
+                gestione. Esto permite que tu máquina local use la llave automáticamente cuando interactúas con GitHub.
+            </p>
+            <pre><code><span class="comment"># Iniciar el agente SSH</span>
 eval "$(ssh-agent -s)"
 <span class="comment"># Agregar tu llave SSH generada al agente</span>
 ssh-add ~/.ssh/id_rsa
 </code></pre>
 
-<h3>3. Buscar y Abrir la Llave Pública SSH en Visual Studio Code</h3>
-<p><strong>Descripción:</strong> Ahora necesitas encontrar tu llave pública SSH para agregarla a tu cuenta de GitHub. La llave pública se encuentra en el archivo <code>id_rsa.pub</code>.</p>
-<p><strong>Paso a Paso:</strong></p>
-<ol>
-    <li><strong>Buscar el Archivo:</strong> Abre tu terminal o línea de comandos y ejecuta el siguiente comando para buscar el archivo:</li>
-    <pre><code>ls ~/.ssh</code></pre>
-    <li><strong>Abrir el Archivo con Visual Studio Code:</strong> Usa el siguiente comando para abrir la llave pública en Visual Studio Code:</li>
-    <pre><code>code ~/.ssh/id_rsa.pub</code></pre>
-    <li><strong>Copiar la Llave Pública:</strong> En Visual Studio Code, selecciona todo el contenido de la llave pública (debería comenzar con <code>ssh-rsa</code>) y cópiala al portapapeles.</li>
-</ol>
+            <h3>3. Buscar y Abrir la Llave Pública SSH en Visual Studio Code</h3>
+            <p><strong>Descripción:</strong> Ahora necesitas encontrar tu llave pública SSH para agregarla a tu cuenta
+                de GitHub. La llave pública se encuentra en el archivo <code>id_rsa.pub</code>.</p>
+            <p><strong>Paso a Paso:</strong></p>
+            <ol>
+                <li><strong>Buscar el Archivo:</strong> Abre tu terminal o línea de comandos y ejecuta el siguiente
+                    comando para buscar el archivo:</li>
+                <pre><code>ls ~/.ssh</code></pre>
+                <li><strong>Abrir el Archivo con Visual Studio Code:</strong> Usa el siguiente comando para abrir la
+                    llave pública en Visual Studio Code:</li>
+                <pre><code>code ~/.ssh/id_rsa.pub</code></pre>
+                <li><strong>Copiar la Llave Pública:</strong> En Visual Studio Code, selecciona todo el contenido de la
+                    llave pública (debería comenzar con <code>ssh-rsa</code>) y cópiala al portapapeles.</li>
+            </ol>
 
-<h3>4. Agregar la Llave Pública a tu Cuenta de GitHub</h3>
-<p><strong>Descripción:</strong> Ahora dirígete a tu cuenta de GitHub. En la esquina superior derecha, haz clic en tu foto de perfil y selecciona "Settings". Luego, en el menú de la izquierda, selecciona "SSH and GPG keys". Haz clic en el botón "New SSH key", pega tu llave pública en el campo correspondiente y haz clic en "Add SSH key".</p>
+            <h3>4. Agregar la Llave Pública a tu Cuenta de GitHub</h3>
+            <p><strong>Descripción:</strong> Ahora dirígete a tu cuenta de GitHub. En la esquina superior derecha, haz
+                clic en tu foto de perfil y selecciona "Settings". Luego, en el menú de la izquierda, selecciona "SSH
+                and GPG keys". Haz clic en el botón "New SSH key", pega tu llave pública en el campo correspondiente y
+                haz clic en "Add SSH key".</p>
 
-<h3>5. Probar la Conexión SSH</h3>
-<p><strong>Descripción:</strong> Para asegurarte de que todo está funcionando correctamente, puedes probar la conexión a GitHub usando el siguiente comando:</p>
-<pre><code><span class="comment"># Probar la conexión SSH con GitHub</span>
+            <h3>5. Probar la Conexión SSH</h3>
+            <p><strong>Descripción:</strong> Para asegurarte de que todo está funcionando correctamente, puedes probar
+                la conexión a GitHub usando el siguiente comando:</p>
+            <pre><code><span class="comment"># Probar la conexión SSH con GitHub</span>
 ssh -T git@github.com
 <span class="comment"># Si es la primera vez que te conectas, puede que te pregunte si quieres continuar, escribe "yes".</span>
 </code></pre>
 
-<h3>6. Configurar Git para Usar SSH</h3>
-<p><strong>Descripción:</strong> Finalmente, asegúrate de que Git esté configurado para usar SSH en lugar de HTTPS. Esto se puede hacer configurando la URL remota de tu repositorio.</p>
-<pre><code><span class="comment"># Cambiar la URL remota para usar SSH</span>
+            <h3>6. Configurar Git para Usar SSH</h3>
+            <p><strong>Descripción:</strong> Finalmente, asegúrate de que Git esté configurado para usar SSH en lugar de
+                HTTPS. Esto se puede hacer configurando la URL remota de tu repositorio.</p>
+            <pre><code><span class="comment"># Cambiar la URL remota para usar SSH</span>
 git remote set-url origin git@github.com:usuario/repositorio.git
 </code></pre>
 
+            <h2>Conclusión</h2>
+            <p>Configurar llaves SSH para tu cuenta de GitHub es un paso fundamental para mejorar la seguridad y la
+                eficiencia en tus proyectos de desarrollo. Al seguir estos pasos, puedes autenticarte de manera segura y
+                fácil en GitHub, lo que te permite enfocarte en lo que realmente importa: escribir código y colaborar
+                con otros.</p>
+
+        </section>
+        <section id="cont8">
+            <h1>Capítulo 8: Versionar un Proyecto Nuevo en un Repositorio Remoto Usando `git clone`</h1>
+
+            <h2>Introducción</h2>
+            <p>En este capítulo, aprenderemos a versionar un proyecto nuevo en un repositorio remoto en GitHub
+                utilizando el comando <code>git clone</code>. Este método es muy eficaz cuando deseas trabajar en un
+                proyecto que ya existe en GitHub, ya que te permite clonar el repositorio remoto en tu máquina local y
+                comenzar a hacer cambios de inmediato. A continuación, se describen los pasos necesarios para realizar
+                este proceso.</p>
+
+            <h2>Paso a Paso para Versionar un Proyecto Nuevo Usando `git clone`</h2>
+
+            <h3>1. Crear un Nuevo Repositorio en GitHub</h3>
+            <p><strong>Descripción:</strong> Antes de clonar un proyecto, primero asegúrate de tener un repositorio
+                vacío en GitHub que deseas utilizar.</p>
+            <ol>
+                <li>Inicia sesión en tu cuenta de GitHub.</li>
+                <li>Haz clic en el botón <strong>"New"</strong> en la parte superior derecha de la página.</li>
+                <li>Completa el formulario:
+                    <ul>
+                        <li><strong>Repository name:</strong> Elige un nombre para tu repositorio.</li>
+                        <li><strong>Description:</strong> Opcional, pero recomendable para explicar de qué se trata el
+                            proyecto.</li>
+                        <li>Selecciona si quieres que el repositorio sea público o privado.</li>
+                        <li>Desmarca la opción de inicializar el repositorio con un README.</li>
+                    </ul>
+                </li>
+                <li>Haz clic en <strong>"Create repository"</strong>.</li>
+            </ol>
+
+            <h3>2. Obtener la URL del Repositorio para Clonar</h3>
+            <p><strong>Descripción:</strong> Una vez creado el repositorio, necesitas obtener la URL para clonar el
+                repositorio en tu máquina local. Puedes elegir entre usar HTTPS o SSH:</p>
+            <ol>
+                <li>En la página del repositorio recién creado, encontrarás un botón que dice <strong>"Code"</strong>.
+                    Haz clic en él.</li>
+                <li>Verás dos opciones: <strong>HTTPS</strong> y <strong>SSH</strong>. Elige la que prefieras y copia la
+                    URL proporcionada.</li>
+            </ol>
+
+            <h3>3. Clonar el Repositorio en tu Máquina Local</h3>
+            <p><strong>Descripción:</strong> Utiliza el comando <code>git clone</code> para copiar el repositorio vacío
+                de GitHub en tu máquina local. Esto creará una copia completa del repositorio, incluyendo su historial
+                de cambios.</p>
+            <pre><code><span class="comment"># Clonar el repositorio vacío de GitHub (sustituye la URL)</span>
+git clone git@github.com:usuario/nombre-del-repositorio.git
+</code></pre>
+
+            <h3>4. Navegar al Directorio del Proyecto</h3>
+            <p><strong>Descripción:</strong> Una vez clonado el repositorio, navega al directorio del proyecto en tu
+                máquina local.</p>
+            <pre><code><span class="comment"># Navegar al directorio del proyecto</span>
+cd nombre-del-repositorio
+</code></pre>
+
+            <h3>5. Crear Archivos y Realizar Cambios</h3>
+            <p><strong>Descripción:</strong> Crea los archivos necesarios para tu proyecto y realiza cambios. Por
+                ejemplo, puedes crear un archivo <code>README.md</code> para describir tu proyecto.</p>
+            <pre><code><span class="comment"># Crear un archivo README</span>
+echo "# Mi Proyecto" >> README.md
+</code></pre>
+
+            <h3>6. Realizar Operaciones de Git</h3>
+            <p><strong>Descripción:</strong> Antes de subir tus cambios, puedes realizar varias operaciones de Git, como
+                verificar el estado del repositorio, agregar archivos al área de preparación y confirmar tus cambios:
+            </p>
+            <pre><code><span class="comment"># Verificar el estado del repositorio</span>
+git status
+<span class="comment"># Agregar todos los archivos al área de preparación</span>
+git add .
+<span class="comment"># Confirmar los cambios con un mensaje descriptivo</span>
+git commit -m "Primer commit: Agregar README.md"
+</code></pre>
+
+            <h3>7. Subir (Push) los Cambios al Repositorio Remoto</h3>
+            <p><strong>Descripción:</strong> Finalmente, puedes subir (push) tus cambios al repositorio remoto en
+                GitHub.</p>
+            <pre><code><span class="comment"># Subir los cambios al repositorio remoto</span>
+git push -u origin main
+</code></pre>
+
+            <h2>Conclusión</h2>
+            <p>Versionar un proyecto nuevo en un repositorio remoto en GitHub utilizando <code>git clone</code> es un
+                proceso simple y efectivo. Siguiendo estos pasos, puedes comenzar a trabajar en tu proyecto de inmediato
+                y asegurarte de que tu trabajo esté respaldado en la nube. Este enfoque es fundamental para el
+                desarrollo colaborativo y la gestión del código, permitiendo a los desarrolladores contribuir fácilmente
+                a proyectos compartidos.</p>
+
+        </section>
+        <section id="cont9">
+            <h1>Capítulo 9: Versionar un Proyecto Existente en un Repositorio Remoto Usando `git remote add origin`</h1>
+
+            <h2>Introducción</h2>
+            <p>En este capítulo, aprenderemos cómo vincular un proyecto existente que ya estamos trabajando de forma
+                local a un repositorio remoto en GitHub. Utilizaremos el comando <code>git remote add origin</code> para
+                conectar nuestro repositorio local a GitHub y poder subir nuestros cambios al repositorio remoto. A
+                continuación, se describen los pasos necesarios para realizar este proceso.</p>
+
+            <h2>Paso a Paso para Versionar un Proyecto Existente Usando `git remote add origin`</h2>
+
+            <h3>1. Crear un Nuevo Repositorio en GitHub</h3>
+            <p><strong>Descripción:</strong> Si aún no tienes un repositorio en GitHub para tu proyecto, primero debes
+                crear uno.</p>
+            <ol>
+                <li>Inicia sesión en tu cuenta de GitHub.</li>
+                <li>Haz clic en el botón <strong>"New"</strong> en la parte superior derecha de la página.</li>
+                <li>Completa el formulario:
+                    <ul>
+                        <li><strong>Repository name:</strong> Elige un nombre para tu repositorio.</li>
+                        <li><strong>Description:</strong> Opcional, pero recomendable para explicar de qué se trata el
+                            proyecto.</li>
+                        <li>Selecciona si quieres que el repositorio sea público o privado.</li>
+                        <li>Desmarca la opción de inicializar el repositorio con un README.</li>
+                    </ul>
+                </li>
+                <li>Haz clic en <strong>"Create repository"</strong>.</li>
+            </ol>
+
+            <h3>2. Navegar a tu Proyecto Local</h3>
+            <p><strong>Descripción:</strong> Abre la terminal y navega al directorio de tu proyecto local que ya está
+                versionado.</p>
+            <pre><code><span class="comment"># Navegar al directorio del proyecto existente</span>
+cd ruta/a/tu/proyecto
+</code></pre>
+
+            <h3>3. Confirmar que el Proyecto Local ya Está Versionado</h3>
+            <p><strong>Descripción:</strong> Asegúrate de que tu proyecto ya esté inicializado como un repositorio de
+                Git y que hayas realizado algunos commits. Si ya trabajaste localmente, deberías haber ejecutado
+                <code>git init</code> previamente y tener un historial de commits. Ahora el objetivo es vincular este
+                repositorio local a un repositorio remoto.
+            </p>
+            <pre><code><span class="comment"># Verificar si el repositorio ya está inicializado</span>
+git status
+<span class="comment"># Si ya has realizado commits, puedes ver el historial</span>
+git log --oneline
+</code></pre>
+
+            <h3>4. Agregar el Repositorio Remoto</h3>
+            <p><strong>Descripción:</strong> Utiliza el comando <code>git remote add origin</code> para vincular tu
+                repositorio local al repositorio remoto que creaste en GitHub. Asegúrate de sustituir la URL por la que
+                copiaste desde GitHub.</p>
+            <pre><code><span class="comment"># Agregar el repositorio remoto (sustituye la URL)</span>
+git remote add origin git@github.com:usuario/nombre-del-repositorio.git
+</code></pre>
+
+            <h3>5. Realizar Operaciones de Git</h3>
+            <p><strong>Descripción:</strong> Ahora puedes realizar varias operaciones de Git antes de subir tus cambios
+                al repositorio remoto. Esto incluye verificar el estado del repositorio, agregar archivos al área de
+                preparación y confirmar tus cambios:</p>
+            <pre><code><span class="comment"># Verificar el estado del repositorio</span>
+git status
+<span class="comment"># Agregar todos los archivos al área de preparación</span>
+git add .
+<span class="comment"># Confirmar los cambios con un mensaje descriptivo</span>
+git commit -m "Primer commit: Vinculación con el repositorio remoto"
+</code></pre>
+
+            <h3>6. Subir (Push) los Cambios al Repositorio Remoto</h3>
+            <p><strong>Descripción:</strong> Finalmente, puedes subir tus cambios al repositorio remoto en GitHub usando
+                el comando <code>git push</code>. Es importante mencionar que la primera vez que hagas
+                <code>push</code>, deberás establecer la rama principal (por lo general, <code>main</code> o
+                <code>master</code>).
+            </p>
+            <pre><code><span class="comment"># Subir los cambios al repositorio remoto</span>
+git push -u origin main
+</code></pre>
+
+            <h2>Conclusión</h2>
+            <p>Vincular un proyecto existente a un repositorio remoto en GitHub utilizando
+                <code>git remote add origin</code> es un proceso sencillo que te permite empezar a colaborar y mantener
+                un respaldo de tu trabajo en la nube. Siguiendo estos pasos, puedes gestionar tu proyecto de manera más
+                eficiente y aprovechar las ventajas de trabajar con Git y GitHub.
+            </p>
+
+        </section>
+        <section id="cont10">
+            <h1>Capítulo 10: Git Tags y Versiones en GitHub</h1>
+
+            <h2>¿Qué son los Tags en Git?</h2>
+            <p>Los <b>tags</b> en Git son referencias que se utilizan para señalar puntos específicos en la historia de un
+                proyecto. Se suelen usar para marcar versiones de lanzamiento, facilitando así el seguimiento de cambios
+                y la gestión de versiones. Los <b>tags</b> son similares a las ramas, pero a diferencia de estas, no se
+                mueven; son fijos y están asociados a un commit específico.</p>
+
+            <h2>Importancia de los Tags</h2>
+            <p>Utilizar <b>tags</b> es crucial en el desarrollo de software, ya que permite identificar de manera clara y
+                rápida los hitos del proyecto. Por ejemplo, al liberar una nueva versión de un software, se puede crear
+                un <b>tag</b> que represente esa versión (como v1.0.0). Esto facilita el acceso a versiones anteriores del
+                código y mejora la colaboración en equipo.</p>
+
+            <h2>Paso a Paso: Trabajando con Git Tags</h2>
+
+            <h3>1. Identificar el Commit</h3>
+            <p><strong>Descripción:</strong> Primero, debes identificar el commit al que deseas asociar un <b>tag</b>. Puedes
+                usar el siguiente comando para visualizar el historial de commits en forma gráfica:</p>
+            <pre><code><span class="comment"># Mostrar el historial de commits en formato gráfico</span>
+git log --all --graph --decorate --oneline
+</code></pre>
+
+            <h3>2. Capturar el Commit</h3>
+            <p><strong>Descripción:</strong> Copia el hash del commit que deseas etiquetar. El hash es la cadena
+                alfanumérica única que identifica el commit.</p>
+
+            <h3>3. Crear el Tag</h3>
+            <p><strong>Descripción:</strong> Usa el siguiente comando para crear un nuevo <b>tag</b>. Asegúrate de sustituir
+                <code>v1.0.0</code> con el nombre del <b>tag</b> que desees, y coloca el hash del commit al final del
+                comando.</p>
+            <pre><code><span class="comment"># Crear un nuevo tag</span>
+git tag -a v1.0.0 -m "Versión 1.0.0" HASH_DEL_COMMIT
+</code></pre>
+
+            <h3>4. Subir el Tag al Repositorio Remoto</h3>
+            <p><strong>Descripción:</strong> Para que el <b>tag</b> esté disponible en GitHub, debes subirlo con el siguiente
+                comando:</p>
+            <pre><code><span class="comment"># Subir el tag al repositorio remoto</span>
+git push origin --tags
+</code></pre>
+
+            <h3>5. Listar los Tags</h3>
+            <p><strong>Descripción:</strong> Puedes listar todos los <b>tags</b> en tu repositorio local usando el siguiente
+                comando:</p>
+            <pre><code><span class="comment"># Listar todos los tags</span>
+git tag
+</code></pre>
+
+            <h3>6. Eliminar un Tag Local</h3>
+            <p><strong>Descripción:</strong> Si necesitas eliminar un <b>tag</b> de tu repositorio local, puedes hacerlo con
+                el siguiente comando:</p>
+            <pre><code><span class="comment"># Eliminar un tag local</span>
+git tag -d v1.0.0
+</code></pre>
+
+            <h3>7. Eliminar un Tag Remoto</h3>
+            <p><strong>Descripción:</strong> Para eliminar un <b>tag</b> del repositorio remoto, primero debes eliminarlo
+                localmente (como en el paso anterior) y luego usar el siguiente comando:</p>
+            <pre><code><span class="comment"># Eliminar un tag remoto</span>
+git push --delete origin v1.0.0
+</code></pre>
+
+            <h2>Conclusión</h2>
+            <p>Los <b>tags</b> son una herramienta poderosa en Git que permiten gestionar versiones de manera eficiente.
+                Aprender a crear, subir y eliminar <b>tags</b> te permitirá tener un mejor control sobre el desarrollo de tu
+                proyecto y facilitará la colaboración en equipo. Siguiendo estos pasos, puedes marcar versiones
+                importantes de tu código y mantener un historial claro y accesible.</p>
+
+        </section>
+        <section id="cont11">
+            <h1>Capítulo 11: Ramas Principales en un Repositorio Remoto</h1>
+
+<h2>Ramas en Git</h2>
+<p>Las ramas en Git son una herramienta poderosa que permite a los desarrolladores trabajar en diferentes características o correcciones de errores de manera aislada. Al utilizar ramas, se puede mantener la estabilidad de la rama principal mientras se realizan cambios en otras ramas. A continuación, se describen las ramas principales que se utilizan comúnmente en un repositorio remoto.</p>
+
+<h2>1. Main</h2>
+<p><strong>Descripción:</strong> La rama <code>main</code> (o <code>master</code> en versiones anteriores) es la rama principal del repositorio. Representa la versión estable del proyecto y se utiliza para lanzar versiones de producción. Todos los cambios en esta rama deben ser probados y revisados antes de ser fusionados.</p>
+
+<h2>2. Develop</h2>
+<p><strong>Descripción:</strong> La rama <code>develop</code> es donde se integran todas las características y correcciones antes de que se fusionen con la rama <code>main</code>. Esta rama se utiliza para el desarrollo activo del proyecto y puede contener cambios que no están listos para ser lanzados.</p>
+
+<h2>3. Feature</h2>
+<p><strong>Descripción:</strong> Las ramas <code>feature</code> se utilizan para desarrollar nuevas funcionalidades o características. Cada nueva funcionalidad se desarrolla en su propia rama <code>feature</code>, que luego se fusiona con la rama <code>develop</code> cuando está completa. Esto permite a los desarrolladores trabajar en varias características simultáneamente sin interferir entre sí.</p>
+
+<h2>4. Hotfix</h2>
+<p><strong>Descripción:</strong> Las ramas <code>hotfix</code> se utilizan para corregir errores críticos en la rama <code>main</code>. Cuando se detecta un error en producción, se crea una rama <code>hotfix</code> desde la rama <code>main</code> para solucionarlo. Una vez resuelto el error, la rama <code>hotfix</code> se fusiona de nuevo en la rama <code>main</code> y <code>develop</code>.</p>
+
+<h2>Paso a Paso: Trabajando con Ramas</h2>
+
+<h3>1. Crear una Nueva Rama</h3>
+<p><strong>Descripción:</strong> Para crear una nueva rama, puedes usar el siguiente comando. Asegúrate de sustituir <code>nombre-de-la-rama</code> con el nombre que desees para tu nueva rama.</p>
+<pre><code><span class="comment"># Crear una nueva rama</span>
+git checkout -b nombre-de-la-rama
+</code></pre>
+
+<h3>2. Listar Ramas</h3>
+<p><strong>Descripción:</strong> Para listar todas las ramas en tu repositorio, utiliza el siguiente comando:</p>
+<pre><code><span class="comment"># Listar todas las ramas</span>
+git branch
+</code></pre>
+
+<h3>3. Cambiar entre Ramas</h3>
+<p><strong>Descripción:</strong> Para cambiar a una rama existente, usa el siguiente comando:</p>
+<pre><code><span class="comment"># Cambiar a otra rama</span>
+git checkout nombre-de-la-rama
+</code></pre>
+
+<h3>4. Fusionar Ramas</h3>
+<p><strong>Descripción:</strong> Para fusionar cambios de una rama a otra, primero debes cambiar a la rama en la que deseas fusionar los cambios y luego usar el siguiente comando:</p>
+<pre><code><span class="comment"># Fusionar una rama en la rama actual</span>
+git merge nombre-de-la-rama
+</code></pre>
+
 <h2>Conclusión</h2>
-<p>Configurar llaves SSH para tu cuenta de GitHub es un paso fundamental para mejorar la seguridad y la eficiencia en tus proyectos de desarrollo. Al seguir estos pasos, puedes autenticarte de manera segura y fácil en GitHub, lo que te permite enfocarte en lo que realmente importa: escribir código y colaborar con otros.</p>
+<p>Las ramas son una parte esencial del flujo de trabajo en Git y permiten gestionar el desarrollo de un proyecto de manera organizada. Aprender a crear, listar, cambiar y fusionar ramas es fundamental para colaborar eficientemente en un equipo y mantener la estabilidad del código en producción. Con un buen manejo de ramas, puedes desarrollar nuevas características y corregir errores sin interrumpir el flujo de trabajo de otros desarrolladores.</p>
 
         </section>
         <div class="botones">
