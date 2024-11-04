@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 
 
@@ -10,7 +11,8 @@
 
 body{
     padding: 40px 0;
-    font-family: "Oswald", sans-serif;
+    font-family: "Titillium Web", sans-serif;
+    /* font-family: "Oswald", sans-serif; */
     background: #2A2D34;
 }
 
@@ -32,11 +34,25 @@ h1{
 h2{
     font-size: 30px;
     color: #8EB8E5;
+    margin: 40px 0 0;
+}
+
+
+h3{
+    font-size: 26px;
+    color: #8EB8E5;
 }
 
 p{
     color: #fff;
     font-size: 22px;
+    font-weight: 300;
+}
+
+hr{
+    border-color: var(--primary-color);
+    display: block;
+    margin: 40px 0 ;
 }
 pre {
     background-color: #17191c;
@@ -51,6 +67,9 @@ code {
     color: #8AE9C1;
 }
 
+.sub-items{
+    padding-left: 40px;
+}
 
 /* PAGINACIÓN POR CAPITULOS */
 
@@ -104,6 +123,13 @@ h2{
 
 p{
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
 }
+
+
+h3{
+    font-size: 18px;
+    color: #8EB8E5;
+}
+
 }
