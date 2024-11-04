@@ -242,7 +242,7 @@ button:hover {
 
 .cont-menu ul{
     width: 70%;
-    background: #2a2d34f0;
+    background: #2a2d34fa;
     position: absolute;
     height: 100%;
     right: -110%;
@@ -270,6 +270,7 @@ button:hover {
     box-shadow: 0 0 0 transparent;
     pointer-events: all;
     border-bottom: 1px solid #424242;
+    border-radius: 0;
 }
 .cont-menu li button:hover{
     color: var(--primary-color);
