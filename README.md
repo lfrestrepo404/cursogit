@@ -50,9 +50,20 @@ Las contribuciones son bienvenidas. Si deseas contribuir a este repositorio, por
 3. Realiza tus cambios y haz commit (`git commit -m 'Agregué algo'`).
 4. Envía un pull request.
 
-## Contacto
+---
 
-Si tienes preguntas o comentarios sobre este proyecto, no dudes en contactarme a través de [lfrestrepo004@gmail.com](mailto:lfrestrepo004@gmail.com).
+## Contacto y Redes Sociales
+
+Puedes encontrarme y seguirme en:
+
+- **GitHub**: [GitHub](https://github.com/lfrestrepo404)
+- **LinkedIn**: [LinkedIn](https://www.linkedin.com/in/luis-felipe-restrepo-aa5576188/)
+- **YouTube**: [YouTube](https://www.youtube.com/@codingnow404)
+- **Website Personal**: [Visita Mi Portafolio](https://felipe-restrepo.netlify.app/)
+- **Correo Electrónico**: [lfrestrepo004@gmail.com](lfrestrepo004@gmail.com)
+
+¡No dudes en contactarme para consultas, colaboraciones o simplemente para conectar!
+
 
 ---
 
