@@ -52,7 +52,7 @@ Las contribuciones son bienvenidas. Si deseas contribuir a este repositorio, por
 
 ## Contacto
 
-Si tienes preguntas o comentarios sobre este proyecto, no dudes en contactarme a través de [tu_email@ejemplo.com](mailto:tu_email@ejemplo.com).
+Si tienes preguntas o comentarios sobre este proyecto, no dudes en contactarme a través de [lfrestrepo004@gmail.com](mailto:lfrestrepo004@gmail.com).
 
 ---
 
