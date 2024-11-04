@@ -1,50 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
 :root{
-    --primary-color: #2396bd;
+    --primary-color: #8AE9C1;
     --secondary-color: #999;
 }
 
 body{
-    padding: 40px;
+    padding: 40px 0;
+    font-family: "Oswald", sans-serif;
+    background: #2A2D34;
 }
 
-header{
-    width: 100%;
-    position: relative;
+section{
+    width: 80%;
+    margin: 0 auto;
 }
 
-header nav{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
-nav ul a{
-    text-decoration: none;
-    margin: 0 10px;
-    color: var(--primary-color);
-    font-size: 20px;
+h1, h2 {
+    color: #8AE9C1;
 }
 
 h1{
-    color: var(--primary-color);
-    font-size: 38px;
+    font-size: 50px;
+}
+
+
+h2{
+    font-size: 30px;
+    color: #8EB8E5;
 }
 
 p{
-    font-size: 18px;
-    color: var(--secondary-color);
+    color: #fff;
+    font-size: 22px;
 }
-
-img{
-    max-width: 100%;
-    border-radius: 20px;
-    width: 1000px;
+pre {
+    background-color: #17191c;
+    padding: 30px 30px;
+    border-radius: 5px;
+    overflow-x: auto;
+    max-width: 1000px;
+    width: 100%;
 }
-main{
-    text-align: center;
-    width: 1200px;
-    margin:  0 auto;
-    padding: 30px;
-    max-width: 100%;
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #8AE9C1;
 }
