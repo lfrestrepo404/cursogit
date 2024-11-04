@@ -219,6 +219,10 @@ button:hover {
         width: 84%;
     }
 
+    .sub-items {
+        padding-left: 24px;
+    }
+
 }
 
 .overlay {
