@@ -40,3 +40,35 @@ window.addEventListener('scroll', () => {
     const overlay = document.querySelector('.overlay');
     overlay.style.transform = `translateY(${window.scrollY}px)`;
 });
+
+// Menu
+    function menu(){
+        const botonMenu = document.getElementById('btn-active');
+        const ulBotones = document.getElementById('ul-btns');
+    
+        ulBotones.classList.toggle('active');
+    }
+    
+
+
+    // Obtener una referencia a la lista de botones y a todas las secciones
+const botones = document.querySelectorAll('#ul-btns button');
+const secciones = document.querySelectorAll('section[id^="cont"]');
+const ulBotones = document.getElementById('ul-btns');
+// Agregar un event listener a cada botón
+botones.forEach(boton => {
+  boton.addEventListener('click', () => {
+    // Remover la clase 'active' de todas las secciones
+    secciones.forEach(seccion => {
+      seccion.classList.remove('active');
+    });
+
+    // Obtener el número de capítulo del botón
+    const numeroCapitulo = boton.id.replace('cap', '');
+
+    // Agregar la clase 'active' a la sección correspondiente
+    const seccionActiva = document.getElementById('cont' + numeroCapitulo);
+    seccionActiva.classList.add('active');
+    ulBotones.classList.remove('active')
+  });
+});
