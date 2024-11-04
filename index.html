@@ -8,8 +8,8 @@
     <title>Git y GitHub</title>
     <link rel="stylesheet" href="css/styles.css">
     <!-- Agrega la librería de iconos de FontAwesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="icon" href="img/github2.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="img/github2.png" type="image/png">
 
 
 
@@ -316,7 +316,7 @@ git config --global user.email "tu.email@ejemplo.com"
                 Estos comandos te permiten gestionar tu proyecto y el historial de cambios sin necesidad de un
                 repositorio remoto. Familiarizarse con estos comandos es fundamental para cualquier desarrollador que
                 trabaje con Git.</p>
-                <hr>
+            <hr>
             <h2>Comandos Básicos de Git Local</h2>
 
             <h3>1. git init</h3>
@@ -404,7 +404,7 @@ git config --global user.email "tu.email@ejemplo.com"
                     git rm nombre_del_archivo
                     <span class="comment"># Esto elimina el archivo y lo prepara para la próxima confirmación.</span>
                     </code></pre>
-                    <hr>
+            <hr>
             <h2>Conclusión</h2>
             <p>Dominar estos comandos básicos de Git local es crucial para gestionar eficazmente tu proyecto y su
                 historial de versiones. Estos comandos te permitirán mantener un control preciso sobre los cambios en tu
@@ -419,7 +419,7 @@ git config --global user.email "tu.email@ejemplo.com"
             <p>En este capítulo, exploraremos el flujo de trabajo en Git, que se refiere a la serie de pasos que
                 seguimos al utilizar este sistema de control de versiones. Comprender este flujo es esencial para
                 gestionar eficazmente tus proyectos y el historial de cambios en el código.</p>
-                <hr>
+            <hr>
             <h2>Flujo de Trabajo en Git</h2>
 
             <h3>1. Inicialización del Repositorio</h3>
@@ -475,7 +475,7 @@ git log
 git checkout id_del_commit
 <span class="comment"># Esto restablece el estado de tu proyecto a cómo estaba en ese commit.</span>
 </code></pre>
-<hr>
+            <hr>
             <h2>Conclusión</h2>
             <p>Comprender el flujo de trabajo en Git es fundamental para cualquier desarrollador. Desde la
                 inicialización del repositorio hasta la confirmación de cambios y la navegación entre commits, cada paso
@@ -492,7 +492,7 @@ git checkout id_del_commit
                 commit en Git. Esto es útil cuando necesitas deshacer cambios o revisar un estado anterior de tu código.
                 Veremos cómo realizar estos procesos tanto para un archivo específico como para todo el proyecto,
                 utilizando comandos de consulta y el restablecimiento de cambios.</p>
-                <hr>
+            <hr>
             <h2>Restaurar un Archivo a un Commit Específico</h2>
 
             <h3>1. Identificar el Commit</h3>
@@ -520,7 +520,7 @@ git add nombre_del_archivo
 <span class="comment"># Confirmar el cambio restaurado</span>
 git commit -m "Restaurar nombre_del_archivo a la versión del commit id_del_commit"
 </code></pre>
-<hr>
+            <hr>
             <h2>Restaurar Todo el Proyecto a un Commit Específico</h2>
 
             <h3>1. Identificar el Commit</h3>
@@ -549,7 +549,7 @@ git reset --soft id_del_commit
 git reset --hard id_del_commit
 <span class="comment"># Esto descarta todos los cambios y restablece el proyecto al estado de ese commit.</span>
 </code></pre>
-<hr>
+            <hr>
             <h2>Conclusión</h2>
             <p>Restaurar versiones anteriores de archivos o todo el proyecto es una habilidad valiosa en Git. Aprender a
                 identificar commits y usar comandos como <code>git checkout</code> y <code>git reset</code> te permitirá
@@ -572,7 +572,7 @@ git reset --hard id_del_commit
                 diferencia de un repositorio local, que se almacena en tu máquina, el repositorio remoto permite a
                 varios colaboradores acceder y trabajar en el mismo proyecto desde diferentes ubicaciones. Esto facilita
                 la colaboración y la sincronización de cambios entre los desarrolladores.</p>
-                <hr>
+            <hr>
             <h2>¿Qué es GitHub?</h2>
             <p><strong>Definición:</strong> GitHub es una plataforma de desarrollo colaborativo que utiliza Git como
                 sistema de control de versiones. Permite a los usuarios alojar y gestionar sus repositorios remotos,
@@ -580,7 +580,7 @@ git reset --hard id_del_commit
             <p><strong>Ejemplo:</strong> Un repositorio en GitHub puede ser un proyecto de software donde varios
                 desarrolladores trabajan juntos, compartiendo cambios, revisando el código de los demás y gestionando
                 versiones del proyecto.</p>
-                <hr>
+            <hr>
             <h2>Flujo de Trabajo con Repositorios Remotos</h2>
 
             <h3>1. Clonar un Repositorio Remoto</h3>
@@ -662,13 +662,13 @@ git pull origin main
                 contraseñas en texto plano, sino que también optimiza nuestro flujo de trabajo, permitiéndonos
                 enfocarnos en el desarrollo y la colaboración con otros desarrolladores de manera más efectiva.</p>
 
-                <hr>
+            <hr>
             <h2>¿Qué es una Llave SSH?</h2>
             <p>Una llave SSH es un par de claves criptográficas que se utilizan para autenticar una conexión segura
                 entre tu máquina local y un servidor remoto, como GitHub. Consiste en una llave pública y una llave
                 privada. La llave pública se almacena en el servidor (GitHub), mientras que la llave privada se queda en
                 tu máquina local y nunca se comparte.</p>
-                <hr>
+            <hr>
             <h2>Paso a Paso para Configurar Llaves SSH</h2>
 
             <h3>1. Generar un Par de Llaves SSH</h3>
@@ -725,7 +725,7 @@ ssh -T git@github.com
             <pre><code><span class="comment"># Cambiar la URL remota para usar SSH</span>
 git remote set-url origin git@github.com:usuario/repositorio.git
 </code></pre>
-<hr>
+            <hr>
             <h2>Conclusión</h2>
             <p>Configurar llaves SSH para tu cuenta de GitHub es un paso fundamental para mejorar la seguridad y la
                 eficiencia en tus proyectos de desarrollo. Al seguir estos pasos, puedes autenticarte de manera segura y
@@ -742,7 +742,7 @@ git remote set-url origin git@github.com:usuario/repositorio.git
                 proyecto que ya existe en GitHub, ya que te permite clonar el repositorio remoto en tu máquina local y
                 comenzar a hacer cambios de inmediato. A continuación, se describen los pasos necesarios para realizar
                 este proceso.</p>
-                <hr>
+            <hr>
             <h2>Paso a Paso para Versionar un Proyecto Nuevo Usando `git clone`</h2>
 
             <h3>1. Crear un Nuevo Repositorio en GitHub</h3>
@@ -813,7 +813,7 @@ git commit -m "Primer commit: Agregar README.md"
             <pre><code><span class="comment"># Subir los cambios al repositorio remoto</span>
 git push -u origin main
 </code></pre>
-<hr>
+            <hr>
             <h2>Conclusión</h2>
             <p>Versionar un proyecto nuevo en un repositorio remoto en GitHub utilizando <code>git clone</code> es un
                 proceso simple y efectivo. Siguiendo estos pasos, puedes comenzar a trabajar en tu proyecto de inmediato
@@ -830,7 +830,7 @@ git push -u origin main
                 local a un repositorio remoto en GitHub. Utilizaremos el comando <code>git remote add origin</code> para
                 conectar nuestro repositorio local a GitHub y poder subir nuestros cambios al repositorio remoto. A
                 continuación, se describen los pasos necesarios para realizar este proceso.</p>
-                <hr>
+            <hr>
             <h2>Paso a Paso para Versionar un Proyecto Existente Usando `git remote add origin`</h2>
 
             <h3>1. Crear un Nuevo Repositorio en GitHub</h3>
@@ -899,7 +899,7 @@ git commit -m "Primer commit: Vinculación con el repositorio remoto"
             <pre><code><span class="comment"># Subir los cambios al repositorio remoto</span>
 git push -u origin main
 </code></pre>
-<hr>
+            <hr>
             <h2>Conclusión</h2>
             <p>Vincular un proyecto existente a un repositorio remoto en GitHub utilizando
                 <code>git remote add origin</code> es un proceso sencillo que te permite empezar a colaborar y mantener
@@ -917,7 +917,7 @@ git push -u origin main
                 proyecto. Se suelen usar para marcar versiones de lanzamiento, facilitando así el seguimiento de cambios
                 y la gestión de versiones. Los <b>tags</b> son similares a las ramas, pero a diferencia de estas, no se
                 mueven; son fijos y están asociados a un commit específico.</p>
-                <hr>
+            <hr>
             <h2>Importancia de los Tags</h2>
             <p>Utilizar <b>tags</b> es crucial en el desarrollo de software, ya que permite identificar de manera clara
                 y
@@ -925,7 +925,7 @@ git push -u origin main
                 un <b>tag</b> que represente esa versión (como v1.0.0). Esto facilita el acceso a versiones anteriores
                 del
                 código y mejora la colaboración en equipo.</p>
-                <hr>
+            <hr>
             <h2>Paso a Paso: Trabajando con Git Tags</h2>
 
             <h3>1. Identificar el Commit</h3>
@@ -981,7 +981,7 @@ git tag -d v1.0.0
             <pre><code><span class="comment"># Eliminar un tag remoto</span>
 git push --delete origin v1.0.0
 </code></pre>
-<hr>
+            <hr>
             <h2>Conclusión</h2>
             <p>Los <b>tags</b> son una herramienta poderosa en Git que permiten gestionar versiones de manera eficiente.
                 Aprender a crear, subir y eliminar <b>tags</b> te permitirá tener un mejor control sobre el desarrollo
@@ -1004,12 +1004,12 @@ git push --delete origin v1.0.0
                 es la rama principal del repositorio. Representa la versión estable del proyecto y se utiliza para
                 lanzar versiones de producción. Todos los cambios en esta rama deben ser probados y revisados antes de
                 ser fusionados.</p>
-                <hr>
+            <hr>
             <h2>2. Develop</h2>
             <p><strong>Descripción:</strong> La rama <code>develop</code> es donde se integran todas las características
                 y correcciones antes de que se fusionen con la rama <code>main</code>. Esta rama se utiliza para el
                 desarrollo activo del proyecto y puede contener cambios que no están listos para ser lanzados.</p>
-                <hr>
+            <hr>
             <h2>3. Feature</h2>
             <p><strong>Descripción:</strong> Las ramas <code>feature</code> se utilizan para desarrollar nuevas
                 funcionalidades o características. Cada nueva funcionalidad se desarrolla en su propia rama
@@ -1053,7 +1053,7 @@ git checkout nombre-de-la-rama
             <pre><code><span class="comment"># Fusionar una rama en la rama actual</span>
 git merge nombre-de-la-rama
 </code></pre>
-<hr>
+            <hr>
             <h2>Conclusión</h2>
             <p>Las ramas son una parte esencial del flujo de trabajo en Git y permiten gestionar el desarrollo de un
                 proyecto de manera organizada. Aprender a crear, listar, cambiar y fusionar ramas es fundamental para
@@ -1200,26 +1200,117 @@ git config --global user.name "Tu Nombre"
                 explorando, practicando y aplicando lo que has aprendido. ¡La perseverancia es la clave del éxito!</p>
 
         </section>
+
+        <section id="cont13">
+            <h1>Capítulo 13: Pull Request (PR) y su Flujo de trabajo</h1>
+            <h2>¿Qué es un Pull Request?</h2>
+            <p>Un Pull Request (PR), o solicitud de extracción, es una herramienta fundamental en el desarrollo de
+                software colaborativo, especialmente en plataformas como GitHub, GitLab y Bitbucket. Un PR es una
+                petición formal que un desarrollador hace para que sus cambios de código sean incorporados en una rama
+                específica de un repositorio, generalmente la rama principal del proyecto.</p>
+            <p>En términos más simples, un PR es una forma de proponer cambios y solicitar una revisión antes de que se
+                integren al código base principal.</p>
+            <hr>
+            <h2>Objetivos de un Pull Request</h2>
+            <ul>
+                <li><strong>Revisión por pares:</strong> Permite que otros desarrolladores revisen el código antes de
+                    que se fusione, asegurando la calidad y consistencia del proyecto.</li>
+                <li><strong>Discusión:</strong> Facilita la discusión sobre las implementaciones y decisiones de diseño.
+                </li>
+                <li><strong>Historial de cambios:</strong> Crea un registro de todos los cambios realizados y las
+                    razones detrás de ellos.</li>
+                <li><strong>Colaboración:</strong> Fomenta la colaboración entre los miembros del equipo.</li>
+            </ul>
+            <hr>
+            <h2>Flujo de Trabajo con Pull Requests</h2>
+            <ol>
+                <li><strong>Actualizar la rama local:</strong>
+                    <pre><code>git pull origin main</code></pre>
+                    Este comando asegura que tu rama local esté actualizada con los últimos cambios del repositorio
+                    remoto.
+                </li>
+                <li><strong>Crear una nueva rama:</strong>
+                    <pre><code>git branch nombre-de-la-rama</code></pre>
+                    Crea una nueva rama para aislar los cambios que realizarás.
+                </li>
+                <li><strong>Cambiar a la nueva rama:</strong>
+                    <pre><code>git checkout nombre-de-la-rama</code></pre>
+                    Comienza a trabajar en la nueva rama.
+                </li>
+                <li><strong>Realizar cambios y versionarlos:</strong>
+                    <ul>
+                        <li>Realiza los cambios necesarios en los archivos.</li>
+                        <li>Verifica el estado de los cambios: <code>git status</code></li>
+                        <li>Agrega los archivos modificados: <code>git add .</code></li>
+                        <li>Realiza un commit: <code>git commit -m "Mensaje descriptivo del commit"</code></li>
+                    </ul>
+                </li>
+                <li><strong>Subir los cambios al repositorio remoto:</strong>
+                    <pre><code>git push origin nombre-de-la-rama</code></pre>
+                    Envía tus cambios a la nueva rama en el repositorio remoto.
+                </li>
+                <li><strong>Crear un Pull Request:</strong>
+                    En la plataforma de control de versiones (GitHub, GitLab, etc.), crea un Pull Request desde tu rama
+                    hacia la rama principal (generalmente `main` o `master`). Describe claramente los cambios realizados
+                    y su propósito.</li>
+                <li><strong>Revisión por pares:</strong>
+                        Otros desarrolladores revisarán tu código, harán comentarios y sugerirán cambios.</li>
+                <li><strong>Aprobación o rechazo:</strong>
+                        El dueño del repositorio o un revisor con permisos decidirá si se fusionan los cambios.</li>
+                <li><strong>Fusión:</strong>
+                    Si se aprueba, los cambios se fusionarán en la rama principal.</li>
+            </ol>
+            <hr>
+            <h2>DevOps y Pull Requests</h2>
+            <p>DevOps es una metodología que busca unir el desarrollo de software (Dev) y las operaciones (Ops) con el
+                objetivo de entregar software de alta calidad de manera más rápida y frecuente. Los Pull Requests juegan
+                un papel crucial en este contexto:</p>
+            <ul>
+                <li><strong>Automatización:</strong> Los Pull Requests pueden integrarse con herramientas de CI/CD para
+                    automatizar pruebas, despliegues y otras tareas.</li>
+                <li><strong>Colaboración:</strong> Facilitan la colaboración entre desarrolladores y equipos de
+                    operaciones.</li>
+                <li><strong>Calidad:</strong> Ayudan a garantizar la calidad del código a través de revisiones y pruebas
+                    automatizadas.</li>
+                <li><strong>Entrega continua:</strong> Son un componente clave en los procesos de entrega continua,
+                    permitiendo integrar cambios de forma frecuente y segura.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Conclusión</h2>
+
+            <p> Los Pull Requests son una herramienta esencial en el desarrollo de software moderno, especialmente en
+                entornos DevOps. Al fomentar la colaboración, la revisión por pares y la automatización, los Pull
+                Requests contribuyen a entregar software de alta calidad de manera más rápida y eficiente.
+            </p>
+
+
+
+        </section>
         <div class="botones">
             <button id="prev">Anterior</button>
             <button id="next">Siguiente</button>
         </div>
     </div>
-    
+
     <footer class="footer">
         <p>Puedes encontrarme en:</p>
         <ul class="social-links">
             <li><a href="https://github.com/lfrestrepo404" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/luis-felipe-restrepo-aa5576188/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            <li><a href="https://www.youtube.com/@codingnow404" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
-            <li><a href="https://felipe-restrepo.netlify.app/" target="_blank"><i class="fas fa-globe"></i> Website Personal</a></li>
+            <li><a href="https://www.linkedin.com/in/luis-felipe-restrepo-aa5576188/" target="_blank"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@codingnow404" target="_blank"><i class="fab fa-youtube"></i>
+                    YouTube</a></li>
+            <li><a href="https://felipe-restrepo.netlify.app/" target="_blank"><i class="fas fa-globe"></i> Website
+                    Personal</a></li>
             <li><a href="mailto:lfrestrepo004@gmail.com"><i class="fas fa-envelope"></i> Correo Electrónico</a></li>
         </ul>
         <p class="copyright">&copy; 2024 Felipe Restrepo - Web Developer</p>
     </footer>
-    
-    
-    
+
+
+
 
     <script src="js/main.js"></script>
 
