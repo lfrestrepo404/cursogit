@@ -59,10 +59,204 @@
 
         </section>
         <section id="cont2">
-            <h2>CAPITULO 2</h2>
+            <h1>Capítulo 2: Comandos Básicos en la Terminal</h1>
+
+            <h2>Importancia de Saber Usar la Terminal</h2>
+            <p>La terminal, también conocida como línea de comandos o consola, es una herramienta poderosa que permite a los desarrolladores interactuar con el sistema operativo de manera directa. Saber utilizar la terminal es fundamental en el desarrollo de software, ya que proporciona un control preciso sobre el entorno, permite la automatización de tareas y facilita la ejecución de comandos que pueden no estar disponibles a través de interfaces gráficas.</p>
+            <p>El uso de la terminal es especialmente relevante al trabajar con herramientas como Git, donde los comandos pueden ser más rápidos y eficientes que usar una interfaz gráfica. Además, muchos servidores y sistemas en la nube requieren el uso de la terminal para la gestión y el despliegue de aplicaciones.</p>
+            
+            <h2>Comandos Básicos en la Terminal</h2>
+            
+            <h3>1. pwd (Print Working Directory)</h3>
+            <p><strong>Descripción:</strong> Muestra la ruta completa del directorio actual en el que te encuentras.</p>
+            <pre><code><span class="comment"># Ejemplo de uso</span>
+            pwd
+            <span class="comment"># Podría devolver algo como:</span>
+            <span class="comment"># /home/usuario/proyecto</span>
+            </code></pre>
+            
+            <h3>2. cd (Change Directory)</h3>
+            <p><strong>Descripción:</strong> Permite cambiar de directorio.</p>
+            <pre><code><span class="comment"># Cambiar a un directorio específico</span>
+            cd nombre_del_directorio
+            <span class="comment"># Volver al directorio anterior</span>
+            cd ..
+            </code></pre>
+            
+            <h3>3. mkdir (Make Directory)</h3>
+            <p><strong>Descripción:</strong> Crea un nuevo directorio.</p>
+            <pre><code><span class="comment"># Crear un nuevo directorio</span>
+            mkdir nombre_del_nuevo_directorio
+            <span class="comment"># Ejemplo:</span>
+            mkdir nuevo_proyecto
+            <span class="comment"># Creará un directorio llamado "nuevo_proyecto".</span>
+            </code></pre>
+            
+            <h3>4. ls (List)</h3>
+            <p><strong>Descripción:</strong> Lista los archivos y directorios en el directorio actual.</p>
+            <pre><code><span class="comment"># Listar archivos y directorios</span>
+            ls
+            <span class="comment"># Listar en formato detallado</span>
+            ls -l
+            </code></pre>
+            
+            <h3>5. touch</h3>
+            <p><strong>Descripción:</strong> Crea un archivo vacío o actualiza la fecha de acceso de un archivo existente.</p>
+            <pre><code><span class="comment"># Crear un archivo vacío</span>
+            touch nombre_del_archivo
+            <span class="comment"># Ejemplo:</span>
+            touch archivo.txt
+            <span class="comment"># Creará un archivo vacío llamado "archivo.txt".</span>
+            </code></pre>
+            
+            <h3>6. cat (Concatenate)</h3>
+            <p><strong>Descripción:</strong> Muestra el contenido de un archivo en la terminal.</p>
+            <pre><code><span class="comment"># Mostrar el contenido de un archivo</span>
+            cat nombre_del_archivo
+            <span class="comment"># Ejemplo:</span>
+            cat archivo.txt
+            <span class="comment"># Mostrará el contenido del archivo "archivo.txt".</span>
+            </code></pre>
+            
+            <h3>7. history</h3>
+            <p><strong>Descripción:</strong> Muestra una lista de los comandos ejecutados recientemente en la terminal.</p>
+            <pre><code><span class="comment"># Mostrar el historial de comandos</span>
+            history
+            <span class="comment"># Al ejecutar este comando, verás una lista numerada de los comandos que has utilizado.</span>
+            </code></pre>
+            
+            <h3>8. rm (Remove)</h3>
+            <p><strong>Descripción:</strong> Elimina archivos o directorios.</p>
+            <pre><code><span class="comment"># Eliminar un archivo</span>
+            rm nombre_del_archivo
+            <span class="comment"># Eliminar un directorio y su contenido</span>
+            rm -r nombre_del_directorio
+            </code></pre>
+            
+            <h3>9. cp (Copy)</h3>
+            <p><strong>Descripción:</strong> Copia archivos o directorios.</p>
+            <pre><code><span class="comment"># Copiar un archivo</span>
+            cp origen destino
+            <span class="comment"># Ejemplo:</span>
+            cp archivo.txt copia_archivo.txt
+            <span class="comment"># Creará una copia del archivo.</span>
+            </code></pre>
+            
+            <h3>10. mv (Move)</h3>
+            <p><strong>Descripción:</strong> Mueve o renombra archivos o directorios.</p>
+            <pre><code><span class="comment"># Mover o renombrar un archivo</span>
+            mv origen destino
+            <span class="comment"># Ejemplo:</span>
+            mv archivo.txt nuevo_nombre.txt
+            <span class="comment"># Cambiará el nombre del archivo.</span>
+            </code></pre>
+            
+            <h3>11. clear</h3>
+            <p><strong>Descripción:</strong> Limpia la pantalla de la terminal.</p>
+            <pre><code><span class="comment"># Limpiar la pantalla</span>
+            clear
+            <span class="comment"># Ejemplo:</span>
+            clear
+            <span class="comment"># Elimina todo el contenido visible de la terminal, dejando solo el prompt.</span>
+            </code></pre>
+            
+            <h2>Conclusión</h2>
+<p>El dominio de la terminal y de comandos básicos es fundamental para cualquier desarrollador que trabaje con Git. La terminal ofrece un control preciso y rápido sobre el sistema y las herramientas de desarrollo, permitiendo realizar tareas complejas de manera eficiente. Los comandos que hemos revisado no solo son esenciales para navegar y gestionar archivos, sino que también son la base sobre la cual se construyen operaciones más avanzadas en Git.</p>
+<p>Utilizar la terminal para interactuar con Git permite a los desarrolladores ejecutar comandos de manera más rápida y flexible, facilitando el seguimiento de cambios, la creación de ramas y la colaboración en proyectos. La familiarización con estos comandos no solo mejora la productividad, sino que también fortalece la comprensión de cómo funcionan los sistemas de control de versiones, lo que es invaluable en el desarrollo moderno de software.</p>
+
+            
+            
         </section>
         <section id="cont3">
-            <h2>CAPITULO 3</h2>
+            <h1>Capítulo 3: Comandos Básicos de Git Local</h1>
+
+<h2>Introducción</h2>
+<p>En este capítulo, aprenderemos sobre los comandos básicos de Git que puedes utilizar en un entorno local. Estos comandos te permiten gestionar tu proyecto y el historial de cambios sin necesidad de un repositorio remoto. Familiarizarse con estos comandos es fundamental para cualquier desarrollador que trabaje con Git.</p>
+
+<h2>Comandos Básicos de Git Local</h2>
+
+<h3>1. git init</h3>
+<p><strong>Descripción:</strong> Inicializa un nuevo repositorio Git en el directorio actual.</p>
+<pre><code><span class="comment"># Inicializar un nuevo repositorio</span>
+git init
+<span class="comment"># Esto crea un nuevo subdirectorio llamado .git que contiene todos los archivos necesarios para el repositorio.</span>
+</code></pre>
+
+<h3>2. git config</h3>
+<p><strong>Descripción:</strong> Configura la información del usuario, como el nombre y el correo electrónico, que se utilizarán en las confirmaciones.</p>
+<pre><code><span class="comment"># Configurar el nombre de usuario</span>
+git config --global user.name "Tu Nombre"
+<span class="comment"># Configurar el correo electrónico</span>
+git config --global user.email "tuemail@example.com"
+<span class="comment"># Esto asegura que tus confirmaciones se asocien correctamente a tu identidad.</span>
+</code></pre>
+
+<h3>3. git status</h3>
+<p><strong>Descripción:</strong> Muestra el estado de los archivos en el repositorio, indicando si están modificados, sin seguimiento o listos para ser confirmados.</p>
+<pre><code><span class="comment"># Ver el estado de los archivos</span>
+git status
+<span class="comment"># Esto muestra qué archivos han sido modificados o añadidos y cuáles están listos para ser confirmados.</span>
+</code></pre>
+
+<h3>4. git add</h3>
+<p><strong>Descripción:</strong> Agrega archivos al área de preparación (staging area) para su inclusión en la próxima confirmación.</p>
+<pre><code><span class="comment"># Agregar un archivo específico</span>
+git add nombre_del_archivo
+<span class="comment"># Agregar todos los archivos modificados</span>
+git add .
+</code></pre>
+
+<h3>5. git commit</h3>
+<p><strong>Descripción:</strong> Crea una nueva confirmación en el repositorio, guardando los cambios del área de preparación.</p>
+<pre><code><span class="comment"># Confirmar los cambios</span>
+git commit -m "Mensaje de la confirmación"
+<span class="comment"># Este mensaje debe describir brevemente los cambios realizados.</span>
+</code></pre>
+
+<h3>6. git log</h3>
+<p><strong>Descripción:</strong> Muestra el historial de confirmaciones en el repositorio, mostrando los mensajes, fechas y autores de cada confirmación.</p>
+<pre><code><span class="comment"># Ver el historial de confirmaciones</span>
+git log
+<span class="comment"># Ver el historial en una línea</span>
+git log --oneline
+<span class="comment"># Esto muestra un resumen conciso de cada confirmación.</span>
+</code></pre>
+
+<h3>7. git diff</h3>
+<p><strong>Descripción:</strong> Muestra las diferencias entre archivos o entre el estado actual y el último commit.</p>
+<pre><code><span class="comment"># Ver las diferencias en los archivos modificados</span>
+git diff
+<span class="comment"># Esto muestra los cambios no confirmados desde el último commit.</span>
+</code></pre>
+
+<h3>8. git checkout</h3>
+<p><strong>Descripción:</strong> Cambia de rama o restaura archivos del repositorio a un estado anterior.</p>
+<pre><code><span class="comment"># Cambiar a una rama específica</span>
+git checkout nombre_de_la_rama
+<span class="comment"># Restaurar un archivo específico al último commit</span>
+git checkout nombre_del_archivo
+<span class="comment"># Cambiar a un commit específico</span>
+git checkout id_del_commit
+</code></pre>
+
+<h3>9. git reset</h3>
+<p><strong>Descripción:</strong> Restablece el índice y el directorio de trabajo a un estado anterior.</p>
+<pre><code><span class="comment"># Restablecer el último commit y mantener los cambios en el directorio de trabajo</span>
+git reset --soft HEAD~1
+<span class="comment"># Restablecer el último commit y descartar los cambios</span>
+git reset --hard HEAD~1
+</code></pre>
+
+<h3>10. git rm</h3>
+<p><strong>Descripción:</strong> Elimina archivos del repositorio y del sistema de archivos.</p>
+<pre><code><span class="comment"># Eliminar un archivo</span>
+git rm nombre_del_archivo
+<span class="comment"># Esto elimina el archivo y lo prepara para la próxima confirmación.</span>
+</code></pre>
+
+<h2>Conclusión</h2>
+<p>Dominar estos comandos básicos de Git local es crucial para gestionar eficazmente tu proyecto y su historial de versiones. Estos comandos te permitirán mantener un control preciso sobre los cambios en tu código y facilitarán el desarrollo colaborativo en el futuro.</p>
+
         </section>
         <div class="botones">
             <button id="prev">Anterior</button>

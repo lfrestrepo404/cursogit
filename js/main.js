@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 section.classList.add('active');
             }
         });
+        // Desplazar la vista hacia la parte superior de la página
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // Event listener para el botón "Siguiente"
