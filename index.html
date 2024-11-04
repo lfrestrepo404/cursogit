@@ -343,7 +343,8 @@
 
             <h3>1. Inicialización del Repositorio</h3>
             <p><strong>Descripción:</strong> El primer paso es inicializar un nuevo repositorio utilizando el comando
-                <code>git init</code>.</p>
+                <code>git init</code>.
+            </p>
             <pre><code><span class="comment"># Inicializar un nuevo repositorio en el directorio actual</span>
 git init
 <span class="comment"># Esto crea un subdirectorio .git que contiene toda la información del repositorio.</span>
@@ -368,7 +369,8 @@ git init
 
             <h3>3. Agregar Archivos al Área de Preparación</h3>
             <p><strong>Descripción:</strong> Para mover archivos de untracked a tracked, utilizamos el comando
-                <code>git add</code>.</p>
+                <code>git add</code>.
+            </p>
             <pre><code><span class="comment"># Agregar un archivo específico al área de preparación</span>
 git add nombre_del_archivo
 <span class="comment"># Esto cambia el estado del archivo a staged.</span>
@@ -376,7 +378,8 @@ git add nombre_del_archivo
 
             <h3>4. Confirmar Cambios</h3>
             <p><strong>Descripción:</strong> Luego de agregar archivos al área de preparación, utilizamos
-                <code>git commit</code> para guardar los cambios en el historial del repositorio.</p>
+                <code>git commit</code> para guardar los cambios en el historial del repositorio.
+            </p>
             <pre><code><span class="comment"># Confirmar los cambios en el repositorio</span>
 git commit -m "Descripción de los cambios realizados"
 <span class="comment"># Esto cambia el estado de los archivos de staged a committed.</span>
@@ -397,6 +400,203 @@ git checkout id_del_commit
                 inicialización del repositorio hasta la confirmación de cambios y la navegación entre commits, cada paso
                 permite un control efectivo sobre el desarrollo de software y facilita la colaboración entre equipos.
             </p>
+
+        </section>
+
+        <section id="cont5">
+            <h1>Capítulo 5: Volver a Versiones de un Commit Específico</h1>
+
+            <h2>Introducción</h2>
+            <p>En este capítulo, aprenderemos a restaurar archivos o todo el proyecto a una versión específica de un
+                commit en Git. Esto es útil cuando necesitas deshacer cambios o revisar un estado anterior de tu código.
+                Veremos cómo realizar estos procesos tanto para un archivo específico como para todo el proyecto,
+                utilizando comandos de consulta y el restablecimiento de cambios.</p>
+
+            <h2>Restaurar un Archivo a un Commit Específico</h2>
+
+            <h3>1. Identificar el Commit</h3>
+            <p><strong>Descripción:</strong> Para restaurar un archivo a un estado anterior, primero necesitamos
+                identificar el commit al que deseamos volver. Esto se puede hacer utilizando el comando
+                <code>git log</code>.</p>
+            <pre><code><span class="comment"># Ver el historial de commits y obtener el ID del commit deseado</span>
+git log
+</code></pre>
+
+            <h3>2. Restaurar el Archivo</h3>
+            <p><strong>Descripción:</strong> Una vez que tenemos el ID del commit, podemos restaurar un archivo
+                específico utilizando <code>git checkout</code>.</p>
+            <pre><code><span class="comment"># Restaurar un archivo específico al estado de un commit anterior</span>
+git checkout id_del_commit -- nombre_del_archivo
+<span class="comment"># Esto reemplaza el contenido del archivo con el de ese commit específico.</span>
+</code></pre>
+
+            <h3>3. Confirmar los Cambios</h3>
+            <p><strong>Descripción:</strong> Después de restaurar el archivo, si deseas conservar este cambio en el
+                historial, debes confirmar el cambio.</p>
+            <pre><code><span class="comment"># Agregar el archivo restaurado al área de preparación</span>
+git add nombre_del_archivo
+<span class="comment"># Confirmar el cambio restaurado</span>
+git commit -m "Restaurar nombre_del_archivo a la versión del commit id_del_commit"
+</code></pre>
+
+            <h2>Restaurar Todo el Proyecto a un Commit Específico</h2>
+
+            <h3>1. Identificar el Commit</h3>
+            <p>Al igual que antes, primero identifica el commit al que deseas volver.</p>
+            <pre><code><span class="comment"># Ver el historial de commits</span>
+git log
+</code></pre>
+
+            <h3>2. Volver a un Commit Específico</h3>
+            <p><strong>Descripción:</strong> Para restaurar todo el proyecto a un commit específico, puedes usar
+                <code>git checkout</code> o <code>git reset</code>.</p>
+            <pre><code><span class="comment"># Volver a un commit específico (deshacer cambios)</span>
+git checkout id_del_commit
+<span class="comment"># Esto cambia el estado de todo el proyecto al de ese commit.</span>
+</code></pre>
+
+            <h3>3. Restablecer el Proyecto</h3>
+            <p><strong>Descripción:</strong> Si deseas deshacer los cambios permanentemente y volver al estado del
+                commit, puedes usar <code>git reset</code>.</p>
+            <pre><code><span class="comment"># Restablecer el proyecto al commit específico (soft)</span>
+git reset --soft id_del_commit
+<span class="comment"># Esto mantiene los cambios en el área de preparación.</span>
+
+<span class="comment"># Restablecer el proyecto al commit específico (hard)</span>
+git reset --hard id_del_commit
+<span class="comment"># Esto descarta todos los cambios y restablece el proyecto al estado de ese commit.</span>
+</code></pre>
+
+            <h2>Conclusión</h2>
+            <p>Restaurar versiones anteriores de archivos o todo el proyecto es una habilidad valiosa en Git. Aprender a
+                identificar commits y usar comandos como <code>git checkout</code> y <code>git reset</code> te permitirá
+                manejar el historial de cambios con mayor eficacia y recuperar versiones anteriores de manera segura.
+            </p>
+
+        </section>
+        <section id="cont6">
+            <h1>Capítulo 6: Flujo de Trabajo con Repositorios Remotos</h1>
+
+<h2>Introducción</h2>
+<p>En este capítulo, exploraremos el flujo de trabajo en Git cuando trabajamos con repositorios remotos. Este proceso es crucial para la colaboración en proyectos, ya que permite a varios desarrolladores trabajar en el mismo código de manera eficiente y organizada. Veremos los comandos clave que se utilizan para clonar repositorios, realizar cambios y sincronizar esos cambios con el repositorio remoto.</p>
+
+
+<h2>¿Qué es un Repositorio Remoto?</h2>
+<p>Un repositorio remoto es una versión de tu proyecto que se encuentra alojada en un servidor en línea. A diferencia de un repositorio local, que se almacena en tu máquina, el repositorio remoto permite a varios colaboradores acceder y trabajar en el mismo proyecto desde diferentes ubicaciones. Esto facilita la colaboración y la sincronización de cambios entre los desarrolladores.</p>
+
+<h2>¿Qué es GitHub?</h2>
+<p><strong>Definición:</strong> GitHub es una plataforma de desarrollo colaborativo que utiliza Git como sistema de control de versiones. Permite a los usuarios alojar y gestionar sus repositorios remotos, colaborar con otros, realizar revisiones de código y mucho más.</p>
+<p><strong>Ejemplo:</strong> Un repositorio en GitHub puede ser un proyecto de software donde varios desarrolladores trabajan juntos, compartiendo cambios, revisando el código de los demás y gestionando versiones del proyecto.</p>
+
+<h2>Flujo de Trabajo con Repositorios Remotos</h2>
+
+<h3>1. Clonar un Repositorio Remoto</h3>
+<p><strong>Descripción:</strong> El primer paso al trabajar con un repositorio remoto es clonarlo a tu máquina local. Esto se realiza utilizando el comando <code>git clone</code>.</p>
+<pre><code><span class="comment"># Clonar un repositorio remoto</span>
+git clone https://github.com/usuario/repositorio.git
+<span class="comment"># Esto crea una copia local del repositorio remoto.</span>
+</code></pre>
+
+<h3>2. Verificar el Estado del Repositorio</h3>
+<p><strong>Descripción:</strong> Antes de realizar cambios, es una buena práctica verificar el estado del repositorio. Esto se puede hacer con el comando <code>git status</code>.</p>
+<pre><code><span class="comment"># Verificar el estado del repositorio</span>
+git status
+<span class="comment"># Esto muestra los archivos modificados, los archivos en el área de preparación y los untracked.</span>
+</code></pre>
+
+<h3>3. Hacer Cambios y Prepararlos</h3>
+<p><strong>Descripción:</strong> Una vez que el repositorio está clonado y has verificado el estado, puedes realizar cambios en los archivos. Después de hacer los cambios, necesitas agregarlos al área de preparación.</p>
+<pre><code><span class="comment"># Agregar todos los cambios al área de preparación</span>
+git add .
+<span class="comment"># El punto (.) indica que se deben agregar todos los archivos modificados.</span>
+</code></pre>
+
+<h3>4. Confirmar los Cambios</h3>
+<p><strong>Descripción:</strong> Después de agregar los cambios, es necesario confirmarlos para que queden registrados en el historial del repositorio local.</p>
+<pre><code><span class="comment"># Confirmar los cambios realizados</span>
+git commit -m "Descripción de los cambios realizados"
+</code></pre>
+
+<h3>5. Enviar Cambios al Repositorio Remoto</h3>
+<p><strong>Descripción:</strong> Una vez que los cambios están confirmados, puedes enviarlos al repositorio remoto usando el comando <code>git push</code>.</p>
+<pre><code><span class="comment"># Enviar cambios al repositorio remoto</span>
+git push origin main
+<span class="comment"># "origin" es el nombre predeterminado para el repositorio remoto y "main" es la rama a la que se envían los cambios.</span>
+</code></pre>
+
+<h3>6. Obtener Cambios del Repositorio Remoto</h3>
+<p><strong>Descripción:</strong> Si otros colaboradores han realizado cambios en el repositorio remoto, puedes obtener esos cambios utilizando <code>git pull</code>.</p>
+<pre><code><span class="comment"># Obtener cambios del repositorio remoto y fusionarlos con la rama actual</span>
+git pull origin main
+</code></pre>
+
+<h3>7. Repetir el Ciclo</h3>
+<p><strong>Descripción:</strong> Este flujo de trabajo es cíclico. Después de realizar un <code>git pull</code> para obtener los últimos cambios, puedes continuar haciendo modificaciones, confirmándolas y enviándolas al repositorio remoto. Repite este ciclo de cambios, confirmaciones y envíos según sea necesario.</p>
+
+<h2>Conclusión</h2>
+<p>El flujo de trabajo con repositorios remotos en Git es fundamental para la colaboración efectiva en proyectos de desarrollo. A través de comandos como <code>git clone</code>, <code>git status</code>, <code>git add .</code>, <code>git commit</code>, <code>git push</code>, y <code>git pull</code>, los desarrolladores pueden sincronizar sus cambios y trabajar juntos de manera eficiente. Entender este flujo de trabajo es clave para el éxito en proyectos de equipo.</p>
+
+
+
+<p>Este capitulo solo busca darte un mayor contexto, en los siguientes capitulos veremos como conectarnos a nuestros repositorios remotos desde cero, por ahora espero hayas entendido el flujo</p>
+        </section>
+        <section id="cont7">
+            <h1>Capítulo 7: Configuración de GitHub con Llaves SSH</h1>
+
+            <h2>Introducción</h2>
+            <p>En este capítulo, aprenderemos a configurar nuestra cuenta de GitHub en nuestro equipo utilizando llaves SSH. Este proceso es fundamental para enlazar de manera segura nuestros dispositivos con GitHub, lo que nos permite trabajar de forma más eficiente y colaborativa. Al usar llaves SSH, podemos autenticarnos sin necesidad de ingresar nuestras credenciales cada vez que interactuamos con un repositorio remoto, lo que simplifica nuestras operaciones diarias. Este método no solo mejora la seguridad al evitar el uso de contraseñas en texto plano, sino que también optimiza nuestro flujo de trabajo, permitiéndonos enfocarnos en el desarrollo y la colaboración con otros desarrolladores de manera más efectiva.</p>
+            
+
+<h2>¿Qué es una Llave SSH?</h2>
+<p>Una llave SSH es un par de claves criptográficas que se utilizan para autenticar una conexión segura entre tu máquina local y un servidor remoto, como GitHub. Consiste en una llave pública y una llave privada. La llave pública se almacena en el servidor (GitHub), mientras que la llave privada se queda en tu máquina local y nunca se comparte.</p>
+
+<h2>Paso a Paso para Configurar Llaves SSH</h2>
+
+<h3>1. Generar un Par de Llaves SSH</h3>
+<p><strong>Descripción:</strong> El primer paso es generar un par de llaves SSH en tu máquina local. Esto se hace mediante el comando <code>ssh-keygen</code>.</p>
+<pre><code><span class="comment"># Generar un nuevo par de llaves SSH</span>
+ssh-keygen -t rsa -b 4096 -C "tu_email@example.com"
+<span class="comment"># El parámetro -C se utiliza para agregar un comentario que normalmente es tu email.</span>
+<span class="comment"># Presiona Enter para aceptar la ubicación predeterminada del archivo.</span>
+</code></pre>
+
+<h3>2. Agregar la Llave SSH al Agente SSH</h3>
+<p><strong>Descripción:</strong> Una vez generada la llave, necesitas agregarla al agente SSH para que la gestione. Esto permite que tu máquina local use la llave automáticamente cuando interactúas con GitHub.</p>
+<pre><code><span class="comment"># Iniciar el agente SSH</span>
+eval "$(ssh-agent -s)"
+<span class="comment"># Agregar tu llave SSH generada al agente</span>
+ssh-add ~/.ssh/id_rsa
+</code></pre>
+
+<h3>3. Buscar y Abrir la Llave Pública SSH en Visual Studio Code</h3>
+<p><strong>Descripción:</strong> Ahora necesitas encontrar tu llave pública SSH para agregarla a tu cuenta de GitHub. La llave pública se encuentra en el archivo <code>id_rsa.pub</code>.</p>
+<p><strong>Paso a Paso:</strong></p>
+<ol>
+    <li><strong>Buscar el Archivo:</strong> Abre tu terminal o línea de comandos y ejecuta el siguiente comando para buscar el archivo:</li>
+    <pre><code>ls ~/.ssh</code></pre>
+    <li><strong>Abrir el Archivo con Visual Studio Code:</strong> Usa el siguiente comando para abrir la llave pública en Visual Studio Code:</li>
+    <pre><code>code ~/.ssh/id_rsa.pub</code></pre>
+    <li><strong>Copiar la Llave Pública:</strong> En Visual Studio Code, selecciona todo el contenido de la llave pública (debería comenzar con <code>ssh-rsa</code>) y cópiala al portapapeles.</li>
+</ol>
+
+<h3>4. Agregar la Llave Pública a tu Cuenta de GitHub</h3>
+<p><strong>Descripción:</strong> Ahora dirígete a tu cuenta de GitHub. En la esquina superior derecha, haz clic en tu foto de perfil y selecciona "Settings". Luego, en el menú de la izquierda, selecciona "SSH and GPG keys". Haz clic en el botón "New SSH key", pega tu llave pública en el campo correspondiente y haz clic en "Add SSH key".</p>
+
+<h3>5. Probar la Conexión SSH</h3>
+<p><strong>Descripción:</strong> Para asegurarte de que todo está funcionando correctamente, puedes probar la conexión a GitHub usando el siguiente comando:</p>
+<pre><code><span class="comment"># Probar la conexión SSH con GitHub</span>
+ssh -T git@github.com
+<span class="comment"># Si es la primera vez que te conectas, puede que te pregunte si quieres continuar, escribe "yes".</span>
+</code></pre>
+
+<h3>6. Configurar Git para Usar SSH</h3>
+<p><strong>Descripción:</strong> Finalmente, asegúrate de que Git esté configurado para usar SSH en lugar de HTTPS. Esto se puede hacer configurando la URL remota de tu repositorio.</p>
+<pre><code><span class="comment"># Cambiar la URL remota para usar SSH</span>
+git remote set-url origin git@github.com:usuario/repositorio.git
+</code></pre>
+
+<h2>Conclusión</h2>
+<p>Configurar llaves SSH para tu cuenta de GitHub es un paso fundamental para mejorar la seguridad y la eficiencia en tus proyectos de desarrollo. Al seguir estos pasos, puedes autenticarte de manera segura y fácil en GitHub, lo que te permite enfocarte en lo que realmente importa: escribir código y colaborar con otros.</p>
 
         </section>
         <div class="botones">
