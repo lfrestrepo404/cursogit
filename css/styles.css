@@ -33,6 +33,10 @@ h1{
 a{
     color: var(--primary-color);
 }
+.images img{
+    width: 90px;
+    margin: 0 10px;
+}
 
 h2{
     font-size: 30px;
