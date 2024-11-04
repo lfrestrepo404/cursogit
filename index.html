@@ -85,6 +85,76 @@
 
             <hr>
 
+            <h2>Instalación de Git y Git Bash en Windows</h2>
+
+            <p>Para comenzar a utilizar Git en Windows, sigue estos pasos para instalar Git y Git Bash:</p>
+
+            <h3>1. Descargar Git</h3>
+            <p>Visita el sitio oficial de Git en <a href="https://git-scm.com/" target="_blank">git-scm.com</a> y
+                descarga la versión para Windows. El archivo tendrá un nombre similar a <strong>Git-<version>
+                        -64-bit.exe</strong>.</p>
+
+            <h3>2. Ejecutar el Instalador</h3>
+            <ul>
+                <li>Haz doble clic en el archivo descargado para iniciar el asistente de instalación.</li>
+                <li>En la primera pantalla, haz clic en "Next" para continuar.</li>
+            </ul>
+
+            <h3>3. Seleccionar Componentes</h3>
+            <ul>
+                <li>En la pantalla "Select Components", asegúrate de seleccionar las siguientes opciones:
+                    <ul>
+                        <li><strong>Git Bash Here:</strong> Esto te permitirá acceder a Git Bash desde el explorador de
+                            archivos.</li>
+                        <li>Opcionalmente, puedes dejar las opciones predeterminadas seleccionadas.</li>
+                    </ul>
+                </li>
+                <li>Haz clic en "Next" para continuar.</li>
+            </ul>
+
+            <h3>4. Configuración del Editor de Texto</h3>
+            <ul>
+                <li>En la siguiente pantalla, selecciona tu editor de texto preferido (por ejemplo, "Use Vim" o "Use
+                    Notepad++"). Esto es importante ya que Git utilizará este editor para los mensajes de commit.</li>
+                <li>Haz clic en "Next".</li>
+            </ul>
+
+            <h3>5. Configuración de la Terminal</h3>
+            <ul>
+                <li>Elige la opción "Use Git from the Windows Command Prompt" si deseas utilizar Git desde la línea de
+                    comandos de Windows. Esto es útil si ya estás familiarizado con el símbolo del sistema.</li>
+                <li>Haz clic en "Next".</li>
+            </ul>
+
+            <h3>6. Configuración de la Comprobación de Línea de Comandos</h3>
+            <ul>
+                <li>Deja la opción predeterminada seleccionada (Checkout Windows-style, commit Unix-style line endings)
+                    y haz clic en "Next".</li>
+            </ul>
+
+            <h3>7. Finalizar la Instalación</h3>
+            <ul>
+                <li>Continúa haciendo clic en "Next" y seleccionando las opciones predeterminadas hasta que llegues a la
+                    pantalla final.</li>
+                <li>Haz clic en "Finish" para completar la instalación.</li>
+            </ul>
+
+            <h3>8. Verificar la Instalación</h3>
+            <p>Para asegurarte de que Git se ha instalado correctamente, abre Git Bash (puedes buscarlo en el menú de
+                inicio) y ejecuta el siguiente comando:</p>
+            <pre><code>git --version
+</code></pre>
+            <p>Deberías ver la versión de Git instalada en tu sistema.</p>
+
+            <h3>9. Configurar Git (Opcional)</h3>
+            <p>Después de instalar Git, es recomendable configurar tu nombre de usuario y correo electrónico. Esto se
+                puede hacer con los siguientes comandos en Git Bash:</p>
+            <pre><code>git config --global user.name "Tu Nombre"
+git config --global user.email "tu.email@ejemplo.com"
+</code></pre>
+
+            <hr>
+
             <h2>Conclusión</h2>
             <p>Git se ha convertido en una herramienta esencial en el desarrollo de software moderno, gracias a su
                 capacidad para mejorar la colaboración y la gestión del código. Su sistema de control de versiones
@@ -115,6 +185,7 @@
                 comandos pueden ser más rápidos y eficientes que usar una interfaz gráfica. Además, muchos servidores y
                 sistemas en la nube requieren el uso de la terminal para la gestión y el despliegue de aplicaciones.</p>
 
+            <hr>
             <h2>Comandos Básicos en la Terminal</h2>
 
             <h3>1. pwd (Print Working Directory)</h3>
@@ -211,7 +282,7 @@
             clear
             <span class="comment"># Elimina todo el contenido visible de la terminal, dejando solo el prompt.</span>
             </code></pre>
-
+            <hr>
             <h2>Conclusión</h2>
             <p>El dominio de la terminal y de comandos básicos es fundamental para cualquier desarrollador que trabaje
                 con Git. La terminal ofrece un control preciso y rápido sobre el sistema y las herramientas de
@@ -235,7 +306,7 @@
                 Estos comandos te permiten gestionar tu proyecto y el historial de cambios sin necesidad de un
                 repositorio remoto. Familiarizarse con estos comandos es fundamental para cualquier desarrollador que
                 trabaje con Git.</p>
-
+                <hr>
             <h2>Comandos Básicos de Git Local</h2>
 
             <h3>1. git init</h3>
@@ -323,7 +394,7 @@
                     git rm nombre_del_archivo
                     <span class="comment"># Esto elimina el archivo y lo prepara para la próxima confirmación.</span>
                     </code></pre>
-
+                    <hr>
             <h2>Conclusión</h2>
             <p>Dominar estos comandos básicos de Git local es crucial para gestionar eficazmente tu proyecto y su
                 historial de versiones. Estos comandos te permitirán mantener un control preciso sobre los cambios en tu
@@ -338,7 +409,7 @@
             <p>En este capítulo, exploraremos el flujo de trabajo en Git, que se refiere a la serie de pasos que
                 seguimos al utilizar este sistema de control de versiones. Comprender este flujo es esencial para
                 gestionar eficazmente tus proyectos y el historial de cambios en el código.</p>
-
+                <hr>
             <h2>Flujo de Trabajo en Git</h2>
 
             <h3>1. Inicialización del Repositorio</h3>
@@ -394,7 +465,7 @@ git log
 git checkout id_del_commit
 <span class="comment"># Esto restablece el estado de tu proyecto a cómo estaba en ese commit.</span>
 </code></pre>
-
+<hr>
             <h2>Conclusión</h2>
             <p>Comprender el flujo de trabajo en Git es fundamental para cualquier desarrollador. Desde la
                 inicialización del repositorio hasta la confirmación de cambios y la navegación entre commits, cada paso
@@ -411,7 +482,7 @@ git checkout id_del_commit
                 commit en Git. Esto es útil cuando necesitas deshacer cambios o revisar un estado anterior de tu código.
                 Veremos cómo realizar estos procesos tanto para un archivo específico como para todo el proyecto,
                 utilizando comandos de consulta y el restablecimiento de cambios.</p>
-
+                <hr>
             <h2>Restaurar un Archivo a un Commit Específico</h2>
 
             <h3>1. Identificar el Commit</h3>
@@ -439,7 +510,7 @@ git add nombre_del_archivo
 <span class="comment"># Confirmar el cambio restaurado</span>
 git commit -m "Restaurar nombre_del_archivo a la versión del commit id_del_commit"
 </code></pre>
-
+<hr>
             <h2>Restaurar Todo el Proyecto a un Commit Específico</h2>
 
             <h3>1. Identificar el Commit</h3>
@@ -468,7 +539,7 @@ git reset --soft id_del_commit
 git reset --hard id_del_commit
 <span class="comment"># Esto descarta todos los cambios y restablece el proyecto al estado de ese commit.</span>
 </code></pre>
-
+<hr>
             <h2>Conclusión</h2>
             <p>Restaurar versiones anteriores de archivos o todo el proyecto es una habilidad valiosa en Git. Aprender a
                 identificar commits y usar comandos como <code>git checkout</code> y <code>git reset</code> te permitirá
@@ -491,7 +562,7 @@ git reset --hard id_del_commit
                 diferencia de un repositorio local, que se almacena en tu máquina, el repositorio remoto permite a
                 varios colaboradores acceder y trabajar en el mismo proyecto desde diferentes ubicaciones. Esto facilita
                 la colaboración y la sincronización de cambios entre los desarrolladores.</p>
-
+                <hr>
             <h2>¿Qué es GitHub?</h2>
             <p><strong>Definición:</strong> GitHub es una plataforma de desarrollo colaborativo que utiliza Git como
                 sistema de control de versiones. Permite a los usuarios alojar y gestionar sus repositorios remotos,
@@ -499,7 +570,7 @@ git reset --hard id_del_commit
             <p><strong>Ejemplo:</strong> Un repositorio en GitHub puede ser un proyecto de software donde varios
                 desarrolladores trabajan juntos, compartiendo cambios, revisando el código de los demás y gestionando
                 versiones del proyecto.</p>
-
+                <hr>
             <h2>Flujo de Trabajo con Repositorios Remotos</h2>
 
             <h3>1. Clonar un Repositorio Remoto</h3>
@@ -555,7 +626,7 @@ git pull origin main
                 confirmándolas y enviándolas al repositorio remoto. Repite este ciclo de cambios, confirmaciones y
                 envíos según sea necesario.
             </p>
-
+            <hr>
             <h2>Conclusión</h2>
             <p>El flujo de trabajo con repositorios remotos en Git es fundamental para la colaboración efectiva en
                 proyectos de desarrollo. A través de comandos como <code>git clone</code>, <code>git status</code>,
@@ -581,13 +652,13 @@ git pull origin main
                 contraseñas en texto plano, sino que también optimiza nuestro flujo de trabajo, permitiéndonos
                 enfocarnos en el desarrollo y la colaboración con otros desarrolladores de manera más efectiva.</p>
 
-
+                <hr>
             <h2>¿Qué es una Llave SSH?</h2>
             <p>Una llave SSH es un par de claves criptográficas que se utilizan para autenticar una conexión segura
                 entre tu máquina local y un servidor remoto, como GitHub. Consiste en una llave pública y una llave
                 privada. La llave pública se almacena en el servidor (GitHub), mientras que la llave privada se queda en
                 tu máquina local y nunca se comparte.</p>
-
+                <hr>
             <h2>Paso a Paso para Configurar Llaves SSH</h2>
 
             <h3>1. Generar un Par de Llaves SSH</h3>
@@ -644,7 +715,7 @@ ssh -T git@github.com
             <pre><code><span class="comment"># Cambiar la URL remota para usar SSH</span>
 git remote set-url origin git@github.com:usuario/repositorio.git
 </code></pre>
-
+<hr>
             <h2>Conclusión</h2>
             <p>Configurar llaves SSH para tu cuenta de GitHub es un paso fundamental para mejorar la seguridad y la
                 eficiencia en tus proyectos de desarrollo. Al seguir estos pasos, puedes autenticarte de manera segura y
@@ -661,7 +732,7 @@ git remote set-url origin git@github.com:usuario/repositorio.git
                 proyecto que ya existe en GitHub, ya que te permite clonar el repositorio remoto en tu máquina local y
                 comenzar a hacer cambios de inmediato. A continuación, se describen los pasos necesarios para realizar
                 este proceso.</p>
-
+                <hr>
             <h2>Paso a Paso para Versionar un Proyecto Nuevo Usando `git clone`</h2>
 
             <h3>1. Crear un Nuevo Repositorio en GitHub</h3>
@@ -732,7 +803,7 @@ git commit -m "Primer commit: Agregar README.md"
             <pre><code><span class="comment"># Subir los cambios al repositorio remoto</span>
 git push -u origin main
 </code></pre>
-
+<hr>
             <h2>Conclusión</h2>
             <p>Versionar un proyecto nuevo en un repositorio remoto en GitHub utilizando <code>git clone</code> es un
                 proceso simple y efectivo. Siguiendo estos pasos, puedes comenzar a trabajar en tu proyecto de inmediato
@@ -749,7 +820,7 @@ git push -u origin main
                 local a un repositorio remoto en GitHub. Utilizaremos el comando <code>git remote add origin</code> para
                 conectar nuestro repositorio local a GitHub y poder subir nuestros cambios al repositorio remoto. A
                 continuación, se describen los pasos necesarios para realizar este proceso.</p>
-
+                <hr>
             <h2>Paso a Paso para Versionar un Proyecto Existente Usando `git remote add origin`</h2>
 
             <h3>1. Crear un Nuevo Repositorio en GitHub</h3>
@@ -818,7 +889,7 @@ git commit -m "Primer commit: Vinculación con el repositorio remoto"
             <pre><code><span class="comment"># Subir los cambios al repositorio remoto</span>
 git push -u origin main
 </code></pre>
-
+<hr>
             <h2>Conclusión</h2>
             <p>Vincular un proyecto existente a un repositorio remoto en GitHub utilizando
                 <code>git remote add origin</code> es un proceso sencillo que te permite empezar a colaborar y mantener
@@ -831,21 +902,25 @@ git push -u origin main
             <h1>Capítulo 10: Git Tags y Versiones en GitHub</h1>
 
             <h2>¿Qué son los Tags en Git?</h2>
-            <p>Los <b>tags</b> en Git son referencias que se utilizan para señalar puntos específicos en la historia de un
+            <p>Los <b>tags</b> en Git son referencias que se utilizan para señalar puntos específicos en la historia de
+                un
                 proyecto. Se suelen usar para marcar versiones de lanzamiento, facilitando así el seguimiento de cambios
                 y la gestión de versiones. Los <b>tags</b> son similares a las ramas, pero a diferencia de estas, no se
                 mueven; son fijos y están asociados a un commit específico.</p>
-
+                <hr>
             <h2>Importancia de los Tags</h2>
-            <p>Utilizar <b>tags</b> es crucial en el desarrollo de software, ya que permite identificar de manera clara y
+            <p>Utilizar <b>tags</b> es crucial en el desarrollo de software, ya que permite identificar de manera clara
+                y
                 rápida los hitos del proyecto. Por ejemplo, al liberar una nueva versión de un software, se puede crear
-                un <b>tag</b> que represente esa versión (como v1.0.0). Esto facilita el acceso a versiones anteriores del
+                un <b>tag</b> que represente esa versión (como v1.0.0). Esto facilita el acceso a versiones anteriores
+                del
                 código y mejora la colaboración en equipo.</p>
-
+                <hr>
             <h2>Paso a Paso: Trabajando con Git Tags</h2>
 
             <h3>1. Identificar el Commit</h3>
-            <p><strong>Descripción:</strong> Primero, debes identificar el commit al que deseas asociar un <b>tag</b>. Puedes
+            <p><strong>Descripción:</strong> Primero, debes identificar el commit al que deseas asociar un <b>tag</b>.
+                Puedes
                 usar el siguiente comando para visualizar el historial de commits en forma gráfica:</p>
             <pre><code><span class="comment"># Mostrar el historial de commits en formato gráfico</span>
 git log --all --graph --decorate --oneline
@@ -856,44 +931,51 @@ git log --all --graph --decorate --oneline
                 alfanumérica única que identifica el commit.</p>
 
             <h3>3. Crear el Tag</h3>
-            <p><strong>Descripción:</strong> Usa el siguiente comando para crear un nuevo <b>tag</b>. Asegúrate de sustituir
+            <p><strong>Descripción:</strong> Usa el siguiente comando para crear un nuevo <b>tag</b>. Asegúrate de
+                sustituir
                 <code>v1.0.0</code> con el nombre del <b>tag</b> que desees, y coloca el hash del commit al final del
-                comando.</p>
+                comando.
+            </p>
             <pre><code><span class="comment"># Crear un nuevo tag</span>
 git tag -a v1.0.0 -m "Versión 1.0.0" HASH_DEL_COMMIT
 </code></pre>
 
             <h3>4. Subir el Tag al Repositorio Remoto</h3>
-            <p><strong>Descripción:</strong> Para que el <b>tag</b> esté disponible en GitHub, debes subirlo con el siguiente
+            <p><strong>Descripción:</strong> Para que el <b>tag</b> esté disponible en GitHub, debes subirlo con el
+                siguiente
                 comando:</p>
             <pre><code><span class="comment"># Subir el tag al repositorio remoto</span>
 git push origin --tags
 </code></pre>
 
             <h3>5. Listar los Tags</h3>
-            <p><strong>Descripción:</strong> Puedes listar todos los <b>tags</b> en tu repositorio local usando el siguiente
+            <p><strong>Descripción:</strong> Puedes listar todos los <b>tags</b> en tu repositorio local usando el
+                siguiente
                 comando:</p>
             <pre><code><span class="comment"># Listar todos los tags</span>
 git tag
 </code></pre>
 
             <h3>6. Eliminar un Tag Local</h3>
-            <p><strong>Descripción:</strong> Si necesitas eliminar un <b>tag</b> de tu repositorio local, puedes hacerlo con
+            <p><strong>Descripción:</strong> Si necesitas eliminar un <b>tag</b> de tu repositorio local, puedes hacerlo
+                con
                 el siguiente comando:</p>
             <pre><code><span class="comment"># Eliminar un tag local</span>
 git tag -d v1.0.0
 </code></pre>
 
             <h3>7. Eliminar un Tag Remoto</h3>
-            <p><strong>Descripción:</strong> Para eliminar un <b>tag</b> del repositorio remoto, primero debes eliminarlo
+            <p><strong>Descripción:</strong> Para eliminar un <b>tag</b> del repositorio remoto, primero debes
+                eliminarlo
                 localmente (como en el paso anterior) y luego usar el siguiente comando:</p>
             <pre><code><span class="comment"># Eliminar un tag remoto</span>
 git push --delete origin v1.0.0
 </code></pre>
-
+<hr>
             <h2>Conclusión</h2>
             <p>Los <b>tags</b> son una herramienta poderosa en Git que permiten gestionar versiones de manera eficiente.
-                Aprender a crear, subir y eliminar <b>tags</b> te permitirá tener un mejor control sobre el desarrollo de tu
+                Aprender a crear, subir y eliminar <b>tags</b> te permitirá tener un mejor control sobre el desarrollo
+                de tu
                 proyecto y facilitará la colaboración en equipo. Siguiendo estos pasos, puedes marcar versiones
                 importantes de tu código y mantener un historial claro y accesible.</p>
 
@@ -901,49 +983,211 @@ git push --delete origin v1.0.0
         <section id="cont11">
             <h1>Capítulo 11: Ramas Principales en un Repositorio Remoto</h1>
 
-<h2>Ramas en Git</h2>
-<p>Las ramas en Git son una herramienta poderosa que permite a los desarrolladores trabajar en diferentes características o correcciones de errores de manera aislada. Al utilizar ramas, se puede mantener la estabilidad de la rama principal mientras se realizan cambios en otras ramas. A continuación, se describen las ramas principales que se utilizan comúnmente en un repositorio remoto.</p>
+            <h2>Ramas en Git</h2>
+            <p>Las ramas en Git son una herramienta poderosa que permite a los desarrolladores trabajar en diferentes
+                características o correcciones de errores de manera aislada. Al utilizar ramas, se puede mantener la
+                estabilidad de la rama principal mientras se realizan cambios en otras ramas. A continuación, se
+                describen las ramas principales que se utilizan comúnmente en un repositorio remoto.</p>
 
-<h2>1. Main</h2>
-<p><strong>Descripción:</strong> La rama <code>main</code> (o <code>master</code> en versiones anteriores) es la rama principal del repositorio. Representa la versión estable del proyecto y se utiliza para lanzar versiones de producción. Todos los cambios en esta rama deben ser probados y revisados antes de ser fusionados.</p>
+            <h2>1. Main</h2>
+            <p><strong>Descripción:</strong> La rama <code>main</code> (o <code>master</code> en versiones anteriores)
+                es la rama principal del repositorio. Representa la versión estable del proyecto y se utiliza para
+                lanzar versiones de producción. Todos los cambios en esta rama deben ser probados y revisados antes de
+                ser fusionados.</p>
+                <hr>
+            <h2>2. Develop</h2>
+            <p><strong>Descripción:</strong> La rama <code>develop</code> es donde se integran todas las características
+                y correcciones antes de que se fusionen con la rama <code>main</code>. Esta rama se utiliza para el
+                desarrollo activo del proyecto y puede contener cambios que no están listos para ser lanzados.</p>
+                <hr>
+            <h2>3. Feature</h2>
+            <p><strong>Descripción:</strong> Las ramas <code>feature</code> se utilizan para desarrollar nuevas
+                funcionalidades o características. Cada nueva funcionalidad se desarrolla en su propia rama
+                <code>feature</code>, que luego se fusiona con la rama <code>develop</code> cuando está completa. Esto
+                permite a los desarrolladores trabajar en varias características simultáneamente sin interferir entre
+                sí.
+            </p>
+            <hr>
+            <h2>4. Hotfix</h2>
+            <p><strong>Descripción:</strong> Las ramas <code>hotfix</code> se utilizan para corregir errores críticos en
+                la rama <code>main</code>. Cuando se detecta un error en producción, se crea una rama
+                <code>hotfix</code> desde la rama <code>main</code> para solucionarlo. Una vez resuelto el error, la
+                rama <code>hotfix</code> se fusiona de nuevo en la rama <code>main</code> y <code>develop</code>.
+            </p>
+            <hr>
+            <h2>Paso a Paso: Trabajando con Ramas</h2>
 
-<h2>2. Develop</h2>
-<p><strong>Descripción:</strong> La rama <code>develop</code> es donde se integran todas las características y correcciones antes de que se fusionen con la rama <code>main</code>. Esta rama se utiliza para el desarrollo activo del proyecto y puede contener cambios que no están listos para ser lanzados.</p>
-
-<h2>3. Feature</h2>
-<p><strong>Descripción:</strong> Las ramas <code>feature</code> se utilizan para desarrollar nuevas funcionalidades o características. Cada nueva funcionalidad se desarrolla en su propia rama <code>feature</code>, que luego se fusiona con la rama <code>develop</code> cuando está completa. Esto permite a los desarrolladores trabajar en varias características simultáneamente sin interferir entre sí.</p>
-
-<h2>4. Hotfix</h2>
-<p><strong>Descripción:</strong> Las ramas <code>hotfix</code> se utilizan para corregir errores críticos en la rama <code>main</code>. Cuando se detecta un error en producción, se crea una rama <code>hotfix</code> desde la rama <code>main</code> para solucionarlo. Una vez resuelto el error, la rama <code>hotfix</code> se fusiona de nuevo en la rama <code>main</code> y <code>develop</code>.</p>
-
-<h2>Paso a Paso: Trabajando con Ramas</h2>
-
-<h3>1. Crear una Nueva Rama</h3>
-<p><strong>Descripción:</strong> Para crear una nueva rama, puedes usar el siguiente comando. Asegúrate de sustituir <code>nombre-de-la-rama</code> con el nombre que desees para tu nueva rama.</p>
-<pre><code><span class="comment"># Crear una nueva rama</span>
+            <h3>1. Crear una Nueva Rama</h3>
+            <p><strong>Descripción:</strong> Para crear una nueva rama, puedes usar el siguiente comando. Asegúrate de
+                sustituir <code>nombre-de-la-rama</code> con el nombre que desees para tu nueva rama.</p>
+            <pre><code><span class="comment"># Crear una nueva rama</span>
 git checkout -b nombre-de-la-rama
 </code></pre>
 
-<h3>2. Listar Ramas</h3>
-<p><strong>Descripción:</strong> Para listar todas las ramas en tu repositorio, utiliza el siguiente comando:</p>
-<pre><code><span class="comment"># Listar todas las ramas</span>
+            <h3>2. Listar Ramas</h3>
+            <p><strong>Descripción:</strong> Para listar todas las ramas en tu repositorio, utiliza el siguiente
+                comando:</p>
+            <pre><code><span class="comment"># Listar todas las ramas</span>
 git branch
 </code></pre>
 
-<h3>3. Cambiar entre Ramas</h3>
-<p><strong>Descripción:</strong> Para cambiar a una rama existente, usa el siguiente comando:</p>
-<pre><code><span class="comment"># Cambiar a otra rama</span>
+            <h3>3. Cambiar entre Ramas</h3>
+            <p><strong>Descripción:</strong> Para cambiar a una rama existente, usa el siguiente comando:</p>
+            <pre><code><span class="comment"># Cambiar a otra rama</span>
 git checkout nombre-de-la-rama
 </code></pre>
 
-<h3>4. Fusionar Ramas</h3>
-<p><strong>Descripción:</strong> Para fusionar cambios de una rama a otra, primero debes cambiar a la rama en la que deseas fusionar los cambios y luego usar el siguiente comando:</p>
-<pre><code><span class="comment"># Fusionar una rama en la rama actual</span>
+            <h3>4. Fusionar Ramas</h3>
+            <p><strong>Descripción:</strong> Para fusionar cambios de una rama a otra, primero debes cambiar a la rama
+                en la que deseas fusionar los cambios y luego usar el siguiente comando:</p>
+            <pre><code><span class="comment"># Fusionar una rama en la rama actual</span>
 git merge nombre-de-la-rama
 </code></pre>
+<hr>
+            <h2>Conclusión</h2>
+            <p>Las ramas son una parte esencial del flujo de trabajo en Git y permiten gestionar el desarrollo de un
+                proyecto de manera organizada. Aprender a crear, listar, cambiar y fusionar ramas es fundamental para
+                colaborar eficientemente en un equipo y mantener la estabilidad del código en producción. Con un buen
+                manejo de ramas, puedes desarrollar nuevas características y corregir errores sin interrumpir el flujo
+                de trabajo de otros desarrolladores.</p>
 
-<h2>Conclusión</h2>
-<p>Las ramas son una parte esencial del flujo de trabajo en Git y permiten gestionar el desarrollo de un proyecto de manera organizada. Aprender a crear, listar, cambiar y fusionar ramas es fundamental para colaborar eficientemente en un equipo y mantener la estabilidad del código en producción. Con un buen manejo de ramas, puedes desarrollar nuevas características y corregir errores sin interrumpir el flujo de trabajo de otros desarrolladores.</p>
+        </section>
+
+        <section id="cont12">
+            <h1>Capítulo 12: Comandos Principales de Git</h1>
+
+            <h2>Lista de Comandos de Git</h2>
+            <ul>
+                <li>
+                    <strong>git init</strong>: Inicializa un nuevo repositorio de Git en el directorio actual.
+                    <pre><code><span class="comment"># Inicializar un nuevo repositorio</span>
+git init
+</code></pre>
+                </li>
+                <li>
+                    <strong>git clone</strong>: Crea una copia local de un repositorio remoto.
+                    <pre><code><span class="comment"># Clonar un repositorio remoto</span>
+git clone https://github.com/usuario/repositorio.git
+</code></pre>
+                </li>
+                <li>
+                    <strong>git status</strong>: Muestra el estado actual del repositorio, incluyendo cambios no
+                    rastreados.
+                    <pre><code><span class="comment"># Ver el estado del repositorio</span>
+git status
+</code></pre>
+                </li>
+                <li>
+                    <strong>git add</strong>: Añade archivos al área de preparación (staging area).
+                    <pre><code><span class="comment"># Añadir todos los cambios al área de preparación</span>
+git add .
+</code></pre>
+                </li>
+                <li>
+                    <strong>git commit</strong>: Registra los cambios en el repositorio local.
+                    <pre><code><span class="comment"># Hacer un commit con un mensaje</span>
+git commit -m "Descripción de los cambios"
+</code></pre>
+                </li>
+                <li>
+                    <strong>git log</strong>: Muestra el historial de commits del repositorio.
+                    <pre><code><span class="comment"># Ver el historial de commits</span>
+git log
+</code></pre>
+                </li>
+                <li>
+                    <strong>git checkout</strong>: Cambia entre ramas o restaura archivos en el directorio de trabajo.
+                    <pre><code><span class="comment"># Cambiar a otra rama</span>
+git checkout nombre-de-la-rama
+</code></pre>
+                </li>
+                <li>
+                    <strong>git branch</strong>: Lista, crea o elimina ramas en el repositorio.
+                    <pre><code><span class="comment"># Listar todas las ramas</span>
+git branch
+</code></pre>
+                </li>
+                <li>
+                    <strong>git merge</strong>: Combina cambios de una rama en la rama actual.
+                    <pre><code><span class="comment"># Fusionar otra rama en la rama actual</span>
+git merge nombre-de-la-rama
+</code></pre>
+                </li>
+                <li>
+                    <strong>git pull</strong>: Descarga y fusiona cambios desde el repositorio remoto.
+                    <pre><code><span class="comment"># Descargar y fusionar cambios remotos</span>
+git pull origin main
+</code></pre>
+                </li>
+                <li>
+                    <strong>git push</strong>: Sube los cambios locales al repositorio remoto.
+                    <pre><code><span class="comment"># Subir cambios al repositorio remoto</span>
+git push origin main
+</code></pre>
+                </li>
+                <li>
+                    <strong>git fetch</strong>: Descarga cambios desde el repositorio remoto sin fusionarlos.
+                    <pre><code><span class="comment"># Descargar cambios remotos sin fusionar</span>
+git fetch origin
+</code></pre>
+                </li>
+                <li>
+                    <strong>git remote</strong>: Gestiona conexiones a repositorios remotos.
+                    <pre><code><span class="comment"># Ver los repositorios remotos configurados</span>
+git remote -v
+</code></pre>
+                </li>
+                <li>
+                    <strong>git tag</strong>: Crea un *tag* para marcar un punto específico en el historial del
+                    proyecto.
+                    <pre><code><span class="comment"># Crear un nuevo tag</span>
+git tag -a v1.0.0 -m "Versión 1.0.0"
+</code></pre>
+                </li>
+                <li>
+                    <strong>git reset</strong>: Deshace cambios en el área de preparación o en el directorio de trabajo.
+                    <pre><code><span class="comment"># Restablecer el área de preparación</span>
+git reset HEAD
+</code></pre>
+                </li>
+                <li>
+                    <strong>git revert</strong>: Crea un nuevo commit que deshace los cambios de un commit anterior.
+                    <pre><code><span class="comment"># Revertir un commit</span>
+git revert HASH_DEL_COMMIT
+</code></pre>
+                </li>
+                <li>
+                    <strong>git stash</strong>: Almacena cambios temporales en un área separada para limpiar el
+                    directorio de trabajo.
+                    <pre><code><span class="comment"># Almacenar cambios temporales</span>
+git stash
+</code></pre>
+                </li>
+                <li>
+                    <strong>git diff</strong>: Muestra las diferencias entre archivos o commits.
+                    <pre><code><span class="comment"># Ver diferencias en archivos</span>
+git diff
+</code></pre>
+                </li>
+                <li>
+                    <strong>git config</strong>: Configura parámetros específicos de Git, como el nombre de usuario y el
+                    correo electrónico.
+                    <pre><code><span class="comment"># Configurar el nombre de usuario</span>
+git config --global user.name "Tu Nombre"
+</code></pre>
+                </li>
+            </ul>
+            <hr>
+            <h2>Conclusión y Motivación</h2>
+            <div class="images">
+
+            </div>
+            <p>Git y GitHub son herramientas fundamentales en el desarrollo de software moderno. Dominar estos comandos
+                te permitirá gestionar tu código de manera efectiva, colaborar con otros desarrolladores y mantener un
+                historial claro de tus cambios. Recuerda que cada proyecto es una oportunidad para aprender y crecer
+                como desarrollador.</p>
+            <p>No te desanimes ante los desafíos; cada error y cada acierto son pasos hacia la maestría. Sigue
+                explorando, practicando y aplicando lo que has aprendido. ¡La perseverancia es la clave del éxito!</p>
 
         </section>
         <div class="botones">
