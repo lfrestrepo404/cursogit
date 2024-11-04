@@ -276,7 +276,7 @@ button:hover {
 }
 
 .cont-menu .btn-menu{
-    background: transparent;
+    background: #2a2d34;
     position: relative;
     z-index: 10;
     color: var(--primary-color);
