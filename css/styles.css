@@ -172,9 +172,17 @@ button:hover{
 @media screen and (min-width:320px) and (max-width: 768px){
     
 h1{
-    font-size: 30px;
+    font-size: 28px;
 }
-
+.social-links{
+    flex-wrap: wrap;
+}
+.social-links li{
+    width: 100%;
+}
+.botones{
+    text-align: center;
+}
 
 h2{
     font-size: 22px;
