@@ -8,22 +8,38 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <section>
-        <h1>Mis Apuntes sobre Git</h1>
-        <p>En esta página se guardan mis apuntes sobre los comandos de Git y sus descripciones.</p>
+    
+    <div id="cont-global">
         
-        <h2>Comando para inicializar un repositorio</h2>
-        <p>El siguiente comando se utiliza para inicializar un repositorio en Git:</p>
-        <pre><code>git init</code></pre>
+        <section id="cont1">
+            <h1>Mis Apuntes sobre Git</h1>
+            <p>En esta página se guardan mis apuntes sobre los comandos de Git y sus descripciones.</p>
+            
+            <h2>Comando para inicializar un repositorio</h2>
+            <p>El siguiente comando se utiliza para inicializar un repositorio en Git:</p>
+            <pre><code>git init</code></pre>
+        
+            <h2>Clonar un repositorio</h2>
+            <p>Para clonar un repositorio remoto, se usa el comando:</p>
+            <pre><code>git clone https://github.com/usuario/repositorio.git</code></pre>
+        
+            <h2>Ver el estado del repositorio</h2>
+            <p>Este comando muestra el estado actual de los archivos en el repositorio:</p>
+            <pre><code>git status</code></pre>
+        </section>
+        <section id="cont2">
+            <h2>CAPITULO 2</h2>
+        </section>
+        <section id="cont3">
+            <h2>CAPITULO 3</h2>
+        </section>
+        <div class="botones">
+            <button id="prev">Anterior</button>
+            <button id="next">Siguiente</button>
+        </div>
+    </div>
     
-        <h2>Clonar un repositorio</h2>
-        <p>Para clonar un repositorio remoto, se usa el comando:</p>
-        <pre><code>git clone https://github.com/usuario/repositorio.git</code></pre>
-    
-        <h2>Ver el estado del repositorio</h2>
-        <p>Este comando muestra el estado actual de los archivos en el repositorio:</p>
-        <pre><code>git status</code></pre>
-    </section>
+    <script src="js/main.js"></script>
     
 </body>
 </html>

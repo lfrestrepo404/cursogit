@@ -52,6 +52,44 @@ code {
 }
 
 
+/* PAGINACIÓN POR CAPITULOS */
+
+#cont-global{
+    position: relative;
+}
+
+#cont-global section {
+    display: none;
+}
+
+#cont-global section.active {
+    display: block;
+}
+
+.botones {
+   text-align: left;
+   width: 80%;
+   margin: 50px auto;
+}
+
+button {
+    padding: 14px 30px;
+    margin: 5px;
+    cursor: pointer;
+    background: var(--primary-color);
+    border-color: transparent;
+    border-radius: 10px;
+    transition: .4s;
+    box-shadow: 0px 1px 3px 0 #000;
+}
+
+button:hover{
+    background: transparent;
+    color: var(--primary-color);
+}
+
+
+/* RESPONSIVE */
 @media screen and (min-width:320px) and (max-width: 768px){
     
 h1{
