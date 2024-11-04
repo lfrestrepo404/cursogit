@@ -33,3 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+/* Efecto de desplazamiento */
+window.addEventListener('scroll', () => {
+    const overlay = document.querySelector('.overlay');
+    overlay.style.transform = `translateY(${window.scrollY}px)`;
+});
