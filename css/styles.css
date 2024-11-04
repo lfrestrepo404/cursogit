@@ -44,7 +44,7 @@ h3{
     font-weight: 400;
 }
 
-p{
+p,li{
     color: #fff;
     font-size: 22px;
     font-weight: 300;
