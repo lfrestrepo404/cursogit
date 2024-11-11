@@ -1,6 +1,6 @@
 
 <img src="https://avatars.githubusercontent.com/u/112680688?v=4" width="60px" style="border-radius: 50">
-# Curso Git 2024 - Platzi
+# Curso Git 2024 - Platzi  -  <a href="https://lfrestrepo404.github.io/cursogit/" target="_blank">Visitar Website</a>
 
 Este repositorio se utiliza para el curso profesional de Git ofrecido en Platzi. Aquí encontrarás mis apuntes y ejemplos prácticos que facilitan la comprensión de los conceptos esenciales de Git y GitHub.
 
